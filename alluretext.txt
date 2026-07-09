@@ -1,0 +1,17 @@
+Step 1: Install AllureInstall the required packages:
+npm install -D allure-playwright allure-commandline
+Step 2: Configure Playwright
+"allure-playwright",
+    {
+      outputFolder: "allure-results",
+    },
+
+Step 3: Run Tests:
+npx playwright test and   After execution, you'll see:allure-results/
+
+Step 4: Generate Report
+npx allure generate allure-results --clean
+allure-report/
+
+Step 5: Open Report
+npx allure open allure-report

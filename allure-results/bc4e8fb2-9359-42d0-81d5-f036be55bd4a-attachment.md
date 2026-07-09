@@ -1,0 +1,1063 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Chapter05/02_DataDrivenTestingUsingJSON.spec.ts >> Data Driven Testing Using JSON file in playwright: Java by testers talk - YouTube
+- Location: tests/Chapter05/02_DataDrivenTestingUsingJSON.spec.ts:21:7
+
+# Error details
+
+```
+Error: expect(page).toHaveTitle(expected) failed
+
+Expected: "Java by testers talk - YouTube☑️ - YouTube"
+Received: "Testers Talk - YouTube"
+
+Call log:
+  - Expect "toHaveTitle" with timeout 120000ms
+    114 × unexpected value "Java by testers talk - YouTube - YouTube"
+    46 × unexpected value "Testers Talk - YouTube"
+
+```
+
+```yaml
+- banner:
+  - button "Guide"
+  - link "YouTube Home":
+    - /url: /
+  - text: IN
+  - button "Skip navigation"
+  - search:
+    - combobox "Search" [expanded]: Java by testers talk - YouTube
+    - button "Clear search query"
+    - button "Search"
+  - button "Search with your voice"
+  - tooltip "tooltip"
+  - button "Settings"
+  - link "Sign in":
+    - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252F%2540testerstalk&hl=en&ec=65620
+- navigation:
+  - link "Home":
+    - /url: /
+  - link "Shorts":
+    - /url: /shorts/
+  - link "Subscriptions":
+    - /url: /feed/subscriptions
+  - link "You":
+    - /url: /feed/you
+- main:
+  - heading "Testers Talk" [level=1]
+  - group: "@testerstalk"
+  - group: 30.6K subscribers 593 videos
+  - text: Hi Friends Welcome to Testers Talk channel, Myself Bakkappa N. I have been working as QA SDET Automation Test Lead over a almost decade. I like to share my knowledge & experience through this channel. Support this channel by Subscribing, Liking and sharing with friends and colleagues.
+  - button "Description. Hi Friends Welcome to Testers Talk channel, Myself Bakkappa ...tap for more.": ...more
+  - link "LinkedIn":
+    - /url: https://www.youtube.com/redirect?event=channel_header&redir_token=QUFFLUhqbEJiV2ZPakV0U0V1TG5SQzAxMFdBb0lJS0dTd3xBQ3Jtc0trY3kxRGlKUENBTEdqNFJhejdWSzNmUklJMFVJTmp0X19BdFVEZS1tWTlwb2hBVDdadkJNSmh5aFRnMk5RdjFZMXNzZV9zWkVlR0w3Q0s2MHZSUnlPZEtadVF5Rl9KNkEteENhWDJkMVRBSHljRTkyQQ&q=https%3A%2F%2Fwww.linkedin.com%2Fgroups%2F10393547%2F
+  - button "and 3 more links"
+  - button "Subscribe"
+  - tablist:
+    - tablist:
+      - tab "Home" [selected]
+      - tab "Videos"
+      - tab "Shorts"
+      - tab "Live"
+      - tab "Playlists"
+      - tab "Posts"
+      - button "Search"
+  - slider "Seek slider"
+  - slider "Click or scroll the panel for the precise seeking."
+  - button "Pause (k)":
+    - img
+  - button "Unmute (m)":
+    - img
+  - slider "Volume"
+  - button "0 Minutes 2 Seconds of 8 Hours 55 Minutes 9 Seconds": 0:02 / 8:55:09
+  - button:
+    - img
+  - button "Settings":
+    - img
+  - heading "#1 Playwright Automation Using TypeScript Full Course 2026 | Playwright TypeScript Beginner Tutorial 8 hours, 55 minutes" [level=3]:
+    - link "#1 Playwright Automation Using TypeScript Full Course 2026 | Playwright TypeScript Beginner Tutorial":
+      - /url: /watch?v=788GvvcfwTY
+  - text: "195,219 views •1 year ago Playwright Automation Using TypeScript Full Course | Playwright TypeScript Beginner Tutorials: Playwright enables reliable end-to-end testing for modern web apps. Playwright is an open-source automation library for browser testing. Playwright provides the ability to automate browser tasks in Chromium, Firefox and WebKit with a single API 🔥 Playwright with TypeScript GitHub -"
+  - link "https://github.com/BakkappaN/Playwrig...":
+    - /url: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbjZxX0JZazFrMnB6V09fZGZyZkJ4djJGdVVUQXxBQ3Jtc0ttVkI3UEpJTEhwUzFqTW10NWotOHRqOVVjLXlFNkJXbGhzUTItSXpVc0V3VlFpR0NXY0twbl9ZRW1kb1poWHZKOHJ3R3ZwWWpaN2Rfa2hvaUphQnotaFdvVXh1RU0xbE13NEEwem1iUlctV2YxVkFmUQ&q=https%3A%2F%2Fgithub.com%2FBakkappaN%2FPlaywrightTypeScriptTutorialFullCourse
+  - text: 🔥 Playwright Documentation -
+  - link "https://playwright.dev/docs/intro":
+    - /url: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbGtjTlJ5Ym5qS0IxaXZ5WTNPcjRZSS1xY1BIQXxBQ3Jtc0tsUUtFQVZJRDF0UUNwNnVQQ0N6MXJad2Z0cTRSRUJvUVBYWkNXQVRjdzFocFZiZERVTmo5bkxvSjU2aVVFa1ZfWWVKUkNEYW1PQU5RQ2lxZFVnWHdnVGpnWTBRdjdJTXZCNWVmam1CeDNjd1RYcWF4Yw&q=https%3A%2F%2Fplaywright.dev%2Fdocs%2Fintro
+  - text: "** FREE YouTube Full Courses ** ========================== 🔊 Playwright with JavaScript Tutorial Full Course -"
+  - link "https://bit.ly/playwright-tutorial-au...":
+    - /url: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbk5PQ2ZQM0xEUUJ3cFR0UjVobFdvbGpjME5WZ3xBQ3Jtc0ttalZ1WjVPajlFQm1uYnhPN3VuT3JfanhMbnBoRXROQ0RTb1NZWWlXMGNoVkRmWGpoNFg4T0FBQ3ZhZ0NXclFlbnhROG5ONDNmMzlvRUdjd3NtYkVzNi10bWMzdldObWRialdwM2ZiZm9Md1NaR09VYw&q=https%3A%2F%2Fbit.ly%2Fplaywright-tutorial-automation-testing
+  - text: 🔊 Playwright API Testing Tutorial -
+  - link "https://bit.ly/playwright-api-testing...":
+    - /url: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbHVDcUJfMzlqcDZDSUFpVHE4MFVnOGFySC1qd3xBQ3Jtc0tsc1FfaG9KQXZ5c0tXSDdfY3B6MWZyNVpoMVFZVlJUSEJBa2VlNlI3d0ZGcm1YV2JJXzMzaFUxY2lNTW5uOHVCSk40ZS1kbU5NY0s0STRvOXVJb3I2NmxLYVJYX3pzSzZVVXNLR2I3NVl0ZDA1VjZFcw&q=https%3A%2F%2Fbit.ly%2Fplaywright-api-testing-tutorial
+  - text: 🔊 Playwright with Azure DevOps -
+  - link "https://bit.ly/playwright-azure-devop...":
+    - /url: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbHlmdGZuc3FLYjN2eUt3UmFaSGNUa0phVW5CUXxBQ3Jtc0tuZWlfU1o5RlhLRUZfV3Zkb290QzNOWWx1ODI4OXdXSVUwSXlYOHAtVTJXQ0dKY2J5NDJ1N3I2N2hkYTVKS1ZGZWppby1obWJaV2pKUGJ4LS13QlRMY0RBYmxhcDk3cENOMnBJbmEzRXpqTDU1TUdPcw&q=https%3A%2F%2Fbit.ly%2Fplaywright-azure-devops-tutorial
+  - text: 🔊 Playwright tutorial for beginners -
+  - link "https://bit.ly/Playwright-Tutorial-Fo...":
+    - /url: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbndGdXFoWlNLWTVFSWVqSFZjRzl4Q05RWlloUXxBQ3Jtc0trRzlEcGZTelhocG5XOF9aY3NOTko5bEpicG5UQVRWTVRnSFZoWTNnaHkyMFFvM3pxRGZvczIzQUdneXVVSWZWQ29FVWZSSXVadndxWkVzd1YzQzFBWGtSQmEwNE5yMU5fcERTVEhoZXp3UHFCX2NoZw&q=https%3A%2F%2Fbit.ly%2FPlaywright-Tutorial-For-Beginners
+  - text: 🔊 Cypress Tutorial Full Course -
+  - link "https://bit.ly/cypress-automation-tes...":
+    - /url: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbVpTazF0WHpDaFh5Q05XUWFYem5nNG9sUjlQQXxBQ3Jtc0trRndWRHlyc041cVE1LU5UeDZ1MFhKWk1nM2cxY0Y5cGd5NjJLekM0aXByNFVqOVFYSVk5SzJXT2ZWd2lDeEJhUGhnUFd0ZTZpQVFnbnpyenVfNXpsNzlSbDVyR2IzNjBFdnFyMVlrVzJiakM4c1BFSQ&q=https%3A%2F%2Fbit.ly%2Fcypress-automation-testing-tutorial
+  - text: 🔊 JavaScript Tutorial Full Course -
+  - link "https://bit.ly/javascript-tutorial-fo...":
+    - /url: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbVV4NHRGN0dKRVhmYzJiOVB1UXk4Uzl6UXA3QXxBQ3Jtc0tuOUhIUUpCVXlfRnNTYm1xU1pRZzhDQ200azJyM3pRUHloUmYxN2JkUXN6NzdDV0JBVERqRjNPSDFBVnZISkpOZHBzdFZMejEwMk5INmZPcWlyUWxIRVBwSjJIUUNwa3F4MEhDOV9oXzZBUHkzNlBrdw&q=https%3A%2F%2Fbit.ly%2Fjavascript-tutorial-for-beginners
+  - text: 🔊 API Testing Tutorial Full Course -
+  - link "https://bit.ly/api-testing-tutorial-f...":
+    - /url: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa1pSTWx4bDYteTJFZ2ZMak0zR3NibDdRa05JQXxBQ3Jtc0tsVnoxckVQZHUzZWpCaEk4MHgzQ19xb25CcWJkTWpRNU05MGVjRmY3WTlzdFdZc1ExWVM2bzQ5ZmQ5WUhGWmtkdWxEMEZjRGZNbkRVWWtUVnZUM3BRalpUZVY3bHJ3ZVM1Nmc1Y1JqU3FBSmQ5R2pHbw&q=https%3A%2F%2Fbit.ly%2Fapi-testing-tutorial-full-course
+  - text: 🔊 Rest Assured API Testing Tutorial Full Course -
+  - link "https://bit.ly/rest-assured-api-testi...":
+    - /url: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbVpUci10am9nWTlIT0ZFZ3ZFNGd2Q19HY1ZpZ3xBQ3Jtc0ttUlVUdHZUX2dWTnBBcU1xdXRlT3JURmJMZmdIdUE5SzJ5WDl3SkxIRHYzOTV3RGlpcnNFTWlsSEIyUXhtRVFVWEg5RXhKRHVqdVkxY0RRWGM1UC1sVEtIRmppSEN2UVpRczc4cnlYaUlvcnk4VjFpMA&q=https%3A%2F%2Fbit.ly%2Frest-assured-api-testing-tutorial
+  - text: 🔊 Postman Tutorial Full Course -
+  - link "https://bit.ly/api-testing-using-post...":
+    - /url: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbTZaZWh4VGxBV2U0YmFPeDlKV084d0ZlVVZZUXxBQ3Jtc0trQUNkMEVSSVQ4MzZELXBLTjljNTZyVkE1Y1Q1RUZSaGxHUF9Ram96VEg0U3ZucHV6ZXlMZjJUVXpac0FLLVhlaWhlQUlEdTR2ODYtQ3hBTS16NHhPSzNtWG1xTU9PUDBfZWR3ZGdFcjFmbk5ndTBHTQ&q=https%3A%2F%2Fbit.ly%2Fapi-testing-using-postman-tutorial
+  - text: 🔊 Specflow Selenium C# Tutorial -
+  - link "https://bit.ly/specflow-selenium-csha...":
+    - /url: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbUpRNDBCNU9KSXVGVjVxcUVDMXUxY1kzSDlxUXxBQ3Jtc0trQ2FENDRGdG1LZHBSamNobll2S3FQTGl3WDhTMDhQWF9xNWVTcWlBU1poNEJha3libGRDMmlyZURKdndHVmFWTEZFc0NUZkVoa1NwaEpzLVBtVWgtRjRjR0x2MTI5cDJQak5JRkZ1UXJ0M2xfMzVabw&q=https%3A%2F%2Fbit.ly%2Fspecflow-selenium-csharp-tutorial
+  - text: 🔊 Selenium C# .NET NUnit Tutorial -
+  - link "https://youtu.be/utfaE9Nv1FY":
+    - /url: /watch?v=utfaE9Nv1FY
+  - text: "Chapters 00:00 Playwright with TypeScript Tutorial Full Course 00:40 Playwright TypeScript GitHub Repository 01:17 Playwright with TypeScript Chapter01 02:09 What is Playwright? 10:32 Playwright Architecture 13:00 Playwright vs Cypress vs Selenium WebDriver 18:06 Softwares required playwright testing 19:35 Download & Install NodeJS 22:04 Download & Install VS Code 23:47 Setup Playwright TypeScript using VS Code 43:21 Run, Debug & Filter Playwright Tests 47:20 Install Playwright TypeScript using Command/Terminal 55:17 Record Playwright Test using VS Code 01:02:13 Run Playwright tests on Chrome, Edge & Firefox browsers 01:07:34 Generate readable playwright html test report 01:14:49 Commonly used playwright terminologies 01:20:49 Write first playwright typescript test & pick locator 01:41:31 Record at Cursor in playwright 01:53:20 Execute specific spec in playwright typescript 01:57:13 Run playwright typescript test on headless mode 02:00:40 Run playwright typescript test on headed mode 02:03:13 Run playwright test on chrome, edge, firefox using cmd 02:09:04 Record playwright test using Codegen 02:16:20 Playwright with TypeScript Chapter02 02:16:52 Capture screenshots in playwright typescript 02:32:30 Attach screenshot into playwright test report 02:39:51 Locators in playwright typescript 03:15:15 Hooks in playwright typescript 03:30:07 Selecting & validating dropdown options in playwright typescript 03:43:52 Handling iframe playwright & drag and drop in playwright 03:56:25 Mouse actions in playwright typescript 04:10:25 Keyboard actions in playwright typescript 04:23:00 Selecting date field value in playwright typescript 04:42:00 playwright typescript assertions - hard & soft 05:11:45 Watch mode in playwright 05:15:41 Playwright UI Mode 05:25:20 Trace Viewer in playwright typescript 05:37:02 Playwright with TypeScript Chapter03 05:37:39 Playwright annotations - skip & only 05:44:05 Group & execute tests in playwright typescript 05:50:40 Tags in Playwright TypeScript 05:58:03 Repeat playwright test execution 06:01:24 Automatically retry/rerun failed test in playwright 06:07:42 Parameterize tests in playwright typescript 06:16:00 Visual Testing or Visual comparison in playwright typescript 06:34:01 Timeouts in playwright 06:54:05 Playwright with TypeScript Chapter04 06:54:45 tsconfig.json file in playwright typescript 07:01:30 Browser context in playwright 07:11:54 Execute only last failed tests in playwright 07:19:49 Handling alerts/popups in playwright 07:40:41 Playwright test reports - html report, json report, junit report etc. 08:00:26 Recording video of test execution in playwright 08:03:04 Parallel/parallelism test execution in playwright typescript 08:09:56 Integrating allure report with playwright 08:19:50 textContent(), innerText(), getAttribute() in playwright 08:31:09 Iterating matching elements in playwright 08:46:46 Handling checkbox & radion buttons in playwright Tags: playwright tutorial,playwright automation tutorial,playwright testing tutorial,microsoft playwright tutorial,playwright test automation,introduction to playwright,playwright automation javascript,playwright with javascript,playwright typescript tutorial, playwright typescript automation tutorial Hashtags:"
+  - link "#Playwright":
+    - /url: /hashtag/playwright
+  - link "#TypeScript":
+    - /url: /hashtag/typescript
+  - link "#JavaScript":
+    - /url: /hashtag/javascript
+  - link "#PlaywrightTypeScript":
+    - /url: /hashtag/playwrighttypescript
+  - link "#PlaywrightJavaScript":
+    - /url: /hashtag/playwrightjavascript
+  - link "#PlaywrightTesting":
+    - /url: /hashtag/playwrighttesting
+  - link "#PlaywrightTutorial":
+    - /url: /hashtag/playwrighttutorial
+  - link "#PlaywrightAutomation":
+    - /url: /hashtag/playwrightautomation
+  - link "#AutomationTesting":
+    - /url: /hashtag/automationtesting
+  - link "#TestAutomation":
+    - /url: /hashtag/testautomation
+  - link "#Selenium":
+    - /url: /hashtag/selenium
+  - link "#Cypress":
+    - /url: /hashtag/cypress
+  - link "#QA":
+    - /url: /hashtag/qa
+  - link "#SDET":
+    - /url: /hashtag/sdet
+  - link "#SoftwareTesting":
+    - /url: /hashtag/softwaretesting
+  - button "Read more":
+    - link "Read more":
+      - /url: /watch?v=788GvvcfwTY
+  - heading "Full Course Tutorials" [level=2]:
+    - link "Full Course Tutorials":
+      - /url: "#"
+  - button "View all"
+  - heading "Playwright TypeScript by Testers Talk ✅" [level=3]:
+    - link "Playwright TypeScript by Testers Talk ✅":
+      - /url: /watch?v=788GvvcfwTY&list=PLUeDIlio4THEXmQxNvKmdDxAVloGTHXMr
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+    - link "Playlist":
+      - /url: /@testerstalk
+  - group:
+    - link "View full playlist":
+      - /url: /playlist?list=PLUeDIlio4THEXmQxNvKmdDxAVloGTHXMr
+  - heading "Playwright JavaScript by Testers Talk☑️" [level=3]:
+    - link "Playwright JavaScript by Testers Talk☑️":
+      - /url: /watch?v=2poXBtifpzA&list=PLUeDIlio4THFSOUcVo_Cfam8I_IO483mV
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+    - link "Playlist":
+      - /url: /@testerstalk
+  - group:
+    - link "View full playlist":
+      - /url: /playlist?list=PLUeDIlio4THFSOUcVo_Cfam8I_IO483mV
+  - heading "Playwright API Testing by Testers Talk☑️" [level=3]:
+    - link "Playwright API Testing by Testers Talk☑️":
+      - /url: /watch?v=lM-lqPun9P8&list=PLUeDIlio4THF3rnYZ63qkbHwMTXiG67vz
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+    - link "Playlist":
+      - /url: /@testerstalk
+  - group:
+    - link "View full playlist":
+      - /url: /playlist?list=PLUeDIlio4THF3rnYZ63qkbHwMTXiG67vz
+  - heading "Cypress by Testers Talk☑️" [level=3]:
+    - link "Cypress by Testers Talk☑️":
+      - /url: /watch?v=oJV5whmzfZI&list=PLUeDIlio4THEbdE2jWyBBxkWqjk4JmHHq
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+    - link "Playlist":
+      - /url: /@testerstalk
+  - group:
+    - link "View full playlist":
+      - /url: /playlist?list=PLUeDIlio4THEbdE2jWyBBxkWqjk4JmHHq
+  - heading "JavaScript by Testers Talk☑️" [level=3]:
+    - link "JavaScript by Testers Talk☑️":
+      - /url: /watch?v=ACUMZ3OkExQ&list=PLUeDIlio4THFLrS29tJnP9yz-QKhn4mdB
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+    - link "Playlist":
+      - /url: /@testerstalk
+  - group:
+    - link "View full playlist":
+      - /url: /playlist?list=PLUeDIlio4THFLrS29tJnP9yz-QKhn4mdB
+  - heading "API Testing by Testers Talk☑️" [level=3]:
+    - link "API Testing by Testers Talk☑️":
+      - /url: /watch?v=QKBa8lt5Wfo&list=PLUeDIlio4THGaSQ_s5WFc2Mo7Ikne2kA5
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+    - link "Playlist":
+      - /url: /@testerstalk
+  - group:
+    - link "View full playlist":
+      - /url: /playlist?list=PLUeDIlio4THGaSQ_s5WFc2Mo7Ikne2kA5
+  - button "Next"
+  - heading "Videos" [level=2]:
+    - link "Videos":
+      - /url: /@testerstalk/videos?view=0&sort=dd&shelf_id=3
+  - heading "#36 Exception Handling in Python | Python Tutorials For Beginners" [level=3]:
+    - link "#36 Exception Handling in Python | Python Tutorials For Beginners 9 minutes, 54 seconds":
+      - /url: /watch?v=p-arwWMnr9o
+      - text: "#36 Exception Handling in Python | Python Tutorials For Beginners"
+  - group: 36 views 3 weeks ago
+  - button "More actions"
+  - heading "#35 Lambda Functions | Python Tutorials For Beginners" [level=3]:
+    - link "#35 Lambda Functions | Python Tutorials For Beginners 4 minutes, 6 seconds":
+      - /url: /watch?v=BPePC6L7VX0
+      - text: "#35 Lambda Functions | Python Tutorials For Beginners"
+  - group: 43 views 3 weeks ago
+  - button "More actions"
+  - heading "#34 Local Variables in Python | Python Tutorials For Beginners" [level=3]:
+    - link "#34 Local Variables in Python | Python Tutorials For Beginners 3 minutes, 27 seconds":
+      - /url: /watch?v=ozKbCczzNQQ
+      - text: "#34 Local Variables in Python | Python Tutorials For Beginners"
+  - group: 50 views 3 weeks ago
+  - button "More actions"
+  - heading "#33 Global Variables in Python | Python Tutorials For Beginners" [level=3]:
+    - link "#33 Global Variables in Python | Python Tutorials For Beginners 3 minutes, 10 seconds":
+      - /url: /watch?v=IxkNOHQ2Hgc
+      - text: "#33 Global Variables in Python | Python Tutorials For Beginners"
+  - group: 61 views 3 weeks ago
+  - button "More actions"
+  - heading "#32 Functions with Arguments & Return Statement in Python" [level=3]:
+    - link "#32 Functions with Arguments & Return Statement in Python 5 minutes, 47 seconds":
+      - /url: /watch?v=r0cxeLQumfs
+      - text: "#32 Functions with Arguments & Return Statement in Python"
+  - group: 78 views 4 weeks ago
+  - button "More actions"
+  - heading "#31 Functions in Python | Python Tutorials For Beginners" [level=3]:
+    - link "#31 Functions in Python | Python Tutorials For Beginners 3 minutes, 21 seconds":
+      - /url: /watch?v=tIo162cTUzM
+      - text: "#31 Functions in Python | Python Tutorials For Beginners"
+  - group: 56 views 4 weeks ago
+  - button "More actions"
+  - button "Next"
+  - heading "API Testing by Testers Talk☑️ Play all" [level=2]:
+    - link "API Testing by Testers Talk☑️":
+      - /url: /playlist?list=PLUeDIlio4THGaSQ_s5WFc2Mo7Ikne2kA5
+    - link "Play all":
+      - /url: /watch?v=QKBa8lt5Wfo&list=PLUeDIlio4THGaSQ_s5WFc2Mo7Ikne2kA5
+  - text: API Testing Postman Tutorial | API Testing Tutorial for beginners
+  - heading "API Testing Postman Tutorial Full Course 2024" [level=3]:
+    - link "API Testing Postman Tutorial Full Course 2024 2 hours, 43 minutes":
+      - /url: /watch?v=QKBa8lt5Wfo
+      - text: API Testing Postman Tutorial Full Course 2024
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 166K views 3 years ago
+  - button "More actions"
+  - heading "REST Assured API Testing Tutorial Crash Course 2024" [level=3]:
+    - link "REST Assured API Testing Tutorial Crash Course 2024 4 hours, 6 minutes":
+      - /url: /watch?v=o9KJhGHl49M
+      - text: REST Assured API Testing Tutorial Crash Course 2024
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 58K views 3 years ago
+  - button "More actions"
+  - heading "Advanced REST Assured API Automation Framework Full Course 2024" [level=3]:
+    - link "Advanced REST Assured API Automation Framework Full Course 2024 3 hours, 15 minutes":
+      - /url: /watch?v=kay86__5eTg
+      - text: Advanced REST Assured API Automation Framework Full Course 2024
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 24K views 3 years ago
+  - button "More actions"
+  - heading "Postman API Testing Tutorial Chapter-01 | Postman API Testing Tutorial for Beginners" [level=3]:
+    - link "Postman API Testing Tutorial Chapter-01 | Postman API Testing Tutorial for Beginners 34 minutes":
+      - /url: /watch?v=Yi2J-AJiFMs
+      - text: Postman API Testing Tutorial Chapter-01 | Postman API Testing Tutorial for Beginners
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 17K views 3 years ago
+  - button "More actions"
+  - heading "Postman API Testing Tutorial Chapter-02 | Postman API Testing Tutorial for Beginners" [level=3]:
+    - link "Postman API Testing Tutorial Chapter-02 | Postman API Testing Tutorial for Beginners 39 minutes":
+      - /url: /watch?v=IhlZKYw55kM
+      - text: Postman API Testing Tutorial Chapter-02 | Postman API Testing Tutorial for Beginners
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 8.7K views 3 years ago
+  - button "More actions"
+  - heading "Postman API Testing Tutorial Chapter-03 | Postman API Testing Tutorial for Beginners" [level=3]:
+    - link "Postman API Testing Tutorial Chapter-03 | Postman API Testing Tutorial for Beginners 20 minutes":
+      - /url: /watch?v=eFjZjTk45fs
+      - text: Postman API Testing Tutorial Chapter-03 | Postman API Testing Tutorial for Beginners
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 4.1K views 3 years ago
+  - button "More actions"
+  - button "Next"
+  - heading "Rest Assured API Testing by Testers Talk Play all" [level=2]:
+    - link "Rest Assured API Testing by Testers Talk":
+      - /url: /playlist?list=PLUeDIlio4THG6Cq08lHiG0hdyftundzrj
+    - link "Play all":
+      - /url: /watch?v=-HJjbich0dQ&list=PLUeDIlio4THG6Cq08lHiG0hdyftundzrj
+  - text: Rest Assured Tutorial, Rest Assured API Automation Testing, Rest Assured Beginners Tutorials, API Automation Testing using Rest Assured, API Testing using Rest Assured, Rest Assured API Testing, Rest Assured Crash Course, Rest Assured API Testing, Completed Rest Assured Tutorials, Rest Assured 2023, Rest Assured for beginners, API Testing with REST Assured and Cucumber, Rest Assured BDD Tutorials
+  - heading "REST Assured API Testing Full Course Overview" [level=3]:
+    - link "REST Assured API Testing Full Course Overview 4 minutes, 13 seconds":
+      - /url: /watch?v=-HJjbich0dQ
+      - text: REST Assured API Testing Full Course Overview
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 9.3K views 3 years ago
+  - button "More actions"
+  - heading "REST Assured API Testing Tutorial Crash Course 2024" [level=3]:
+    - link "REST Assured API Testing Tutorial Crash Course 2024 4 hours, 6 minutes":
+      - /url: /watch?v=o9KJhGHl49M
+      - text: REST Assured API Testing Tutorial Crash Course 2024
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 58K views 3 years ago
+  - button "More actions"
+  - heading "Advanced REST Assured API Automation Framework Full Course 2024" [level=3]:
+    - link "Advanced REST Assured API Automation Framework Full Course 2024 3 hours, 15 minutes":
+      - /url: /watch?v=kay86__5eTg&pp=0gcJCU8LAYcqIYzv
+      - text: Advanced REST Assured API Automation Framework Full Course 2024
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 24K views 3 years ago
+  - button "More actions"
+  - heading "Rest Assured API Automation Framework GitHub Repository" [level=3]:
+    - link "Rest Assured API Automation Framework GitHub Repository 51 seconds":
+      - /url: /watch?v=vHgjTkSn778
+      - text: Rest Assured API Automation Framework GitHub Repository
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 5.5K views 3 years ago
+  - button "More actions"
+  - heading "How to Resolve equalTo() from Matchers.equalTo() Import Issue in Rest Assured API Automation Testing" [level=3]:
+    - link "How to Resolve equalTo() from Matchers.equalTo() Import Issue in Rest Assured API Automation Testing 2 minutes, 42 seconds":
+      - /url: /watch?v=HAo8VsnnJVA
+      - text: How to Resolve equalTo() from Matchers.equalTo() Import Issue in Rest Assured API Automation Testing
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.2K views 3 years ago
+  - button "More actions"
+  - heading "How to Resolve SLF4J Error in Maven Project | failed to load class org.slf4j.impl.staticloggerbinder" [level=3]:
+    - link "How to Resolve SLF4J Error in Maven Project | failed to load class org.slf4j.impl.staticloggerbinder 3 minutes, 40 seconds":
+      - /url: /watch?v=FtdvhPEVhuE
+      - text: How to Resolve SLF4J Error in Maven Project | failed to load class org.slf4j.impl.staticloggerbinder
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 29K views 3 years ago
+  - button "More actions"
+  - button "Next"
+  - heading "Specflow Selenium C# by Testers Talk Play all" [level=2]:
+    - link "Specflow Selenium C# by Testers Talk":
+      - /url: /playlist?list=PLUeDIlio4THGmh41cgOGHMPxAJyK44WrA
+    - link "Play all":
+      - /url: /watch?v=7xPcalwU76c&list=PLUeDIlio4THGmh41cgOGHMPxAJyK44WrA
+  - heading "SpecFlow Selenium C# Tutorial Full Course | SpecFlow C# Tutorial | Selenium Automation Testing" [level=3]:
+    - link "SpecFlow Selenium C# Tutorial Full Course | SpecFlow C# Tutorial | Selenium Automation Testing 2 hours, 59 minutes":
+      - /url: /watch?v=7xPcalwU76c
+      - text: SpecFlow Selenium C# Tutorial Full Course | SpecFlow C# Tutorial | Selenium Automation Testing
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 85K views 3 years ago
+  - button "More actions"
+  - heading "SpecFlow Selenium C# Tutorials-01 End to End in 20 Minutes |Install, Project Creation & First Script" [level=3]:
+    - link "SpecFlow Selenium C# Tutorials-01 End to End in 20 Minutes |Install, Project Creation & First Script 33 minutes":
+      - /url: /watch?v=tpANSHdrwp8
+      - text: SpecFlow Selenium C# Tutorials-01 End to End in 20 Minutes |Install, Project Creation & First Script
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 36K views 3 years ago
+  - button "More actions"
+  - heading "SpecFlow Selenium C# Tutorials-02 | Hooks Implementation" [level=3]:
+    - link "SpecFlow Selenium C# Tutorials-02 | Hooks Implementation 20 minutes":
+      - /url: /watch?v=mGWIzf82zyo
+      - text: SpecFlow Selenium C# Tutorials-02 | Hooks Implementation
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 11K views 3 years ago
+  - button "More actions"
+  - heading "SpecFlow Selenium C# Tutorials-03 | Extent Report Generation & Customization" [level=3]:
+    - link "SpecFlow Selenium C# Tutorials-03 | Extent Report Generation & Customization 28 minutes":
+      - /url: /watch?v=qKJ3ZwC8Tag
+      - text: SpecFlow Selenium C# Tutorials-03 | Extent Report Generation & Customization
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 13K views 3 years ago
+  - button "More actions"
+  - heading "SpecFlow Selenium C# Tutorials-04 Add Screenshot into Extent Report When Script Failed" [level=3]:
+    - link "SpecFlow Selenium C# Tutorials-04 Add Screenshot into Extent Report When Script Failed 19 minutes":
+      - /url: /watch?v=4NfT9w1wMLc
+      - text: SpecFlow Selenium C# Tutorials-04 Add Screenshot into Extent Report When Script Failed
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 6.9K views 3 years ago
+  - button "More actions"
+  - heading "SpecFlow Selenium C# Tutorials-05 | Data Driven Testing Part-01" [level=3]:
+    - link "SpecFlow Selenium C# Tutorials-05 | Data Driven Testing Part-01 9 minutes, 12 seconds":
+      - /url: /watch?v=8yE_Opp8TNU
+      - text: SpecFlow Selenium C# Tutorials-05 | Data Driven Testing Part-01
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 4K views 3 years ago
+  - button "More actions"
+  - button "Next"
+  - heading "EasyRepro by Testers Talk Play all" [level=2]:
+    - link "EasyRepro by Testers Talk":
+      - /url: /playlist?list=PLUeDIlio4THFl64e0ifCQsVeATBy152Xc
+    - link "Play all":
+      - /url: /watch?v=x0cHZ3E7Ekw&list=PLUeDIlio4THFl64e0ifCQsVeATBy152Xc
+  - heading "EasyRepro Framework Tutorial Full Course | Microsoft D365 CRM Automation" [level=3]:
+    - link "EasyRepro Framework Tutorial Full Course | Microsoft D365 CRM Automation 2 hours, 2 minutes":
+      - /url: /watch?v=x0cHZ3E7Ekw
+      - text: EasyRepro Framework Tutorial Full Course | Microsoft D365 CRM Automation
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 12K views 3 years ago
+  - button "More actions"
+  - heading "EasyRepro Framework Tutorials-01 | SetUp Working GitHub Repository" [level=3]:
+    - link "EasyRepro Framework Tutorials-01 | SetUp Working GitHub Repository 10 minutes, 37 seconds":
+      - /url: /watch?v=pKR2a4pcfdg
+      - text: EasyRepro Framework Tutorials-01 | SetUp Working GitHub Repository
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 4.8K views 3 years ago
+  - button "More actions"
+  - heading "EasyRepro Framework Tutorials-02 | Automate Microsoft Dynamics 365 CRM Application" [level=3]:
+    - link "EasyRepro Framework Tutorials-02 | Automate Microsoft Dynamics 365 CRM Application 23 minutes":
+      - /url: /watch?v=vS1RHu71-Z8
+      - text: EasyRepro Framework Tutorials-02 | Automate Microsoft Dynamics 365 CRM Application
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.7K views 3 years ago
+  - button "More actions"
+  - heading "EasyRepro Framework Tutorials-03 | Lookup Field, Dropdown List & TABS" [level=3]:
+    - link "EasyRepro Framework Tutorials-03 | Lookup Field, Dropdown List & TABS 15 minutes":
+      - /url: /watch?v=fc9e5lHfGGI
+      - text: EasyRepro Framework Tutorials-03 | Lookup Field, Dropdown List & TABS
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2K views 3 years ago
+  - button "More actions"
+  - heading "EasyRepro Framework Tutorials-04 | Date Field, Assign Priority & Grouping Scripts" [level=3]:
+    - link "EasyRepro Framework Tutorials-04 | Date Field, Assign Priority & Grouping Scripts 10 minutes, 11 seconds":
+      - /url: /watch?v=Sg8TlbOoikA
+      - text: EasyRepro Framework Tutorials-04 | Date Field, Assign Priority & Grouping Scripts
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.1K views 3 years ago
+  - button "More actions"
+  - heading "EasyRepro Framework Tutorials-05 | Create CRM Record and Search Record" [level=3]:
+    - link "EasyRepro Framework Tutorials-05 | Create CRM Record and Search Record 6 minutes, 20 seconds":
+      - /url: /watch?v=hpEZt-_UeHc
+      - text: EasyRepro Framework Tutorials-05 | Create CRM Record and Search Record
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 896 views 3 years ago
+  - button "More actions"
+  - button "Next"
+  - heading "Full Courses by Bakkappa N Play all" [level=2]:
+    - link "Full Courses by Bakkappa N":
+      - /url: /playlist?list=PLUeDIlio4THE4J8uOMpJJw6IEssBwDFrL
+    - link "Play all":
+      - /url: /watch?v=lwkyl-Th9nU&list=PLUeDIlio4THE4J8uOMpJJw6IEssBwDFrL
+  - heading "Data Driven Framework Full Course by Bakkappa N" [level=3]:
+    - link "Data Driven Framework Full Course by Bakkappa N 1 hour, 46 minutes":
+      - /url: /watch?v=lwkyl-Th9nU
+      - text: Data Driven Framework Full Course by Bakkappa N
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 7.8K views 5 years ago
+  - button "More actions"
+  - heading "Appium Selenium GRID Tutorial Full Course by Bakkappa N" [level=3]:
+    - link "Appium Selenium GRID Tutorial Full Course by Bakkappa N 1 hour, 3 minutes":
+      - /url: /watch?v=OpzWMdL7kRA
+      - text: Appium Selenium GRID Tutorial Full Course by Bakkappa N
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 4.4K views 5 years ago
+  - button "More actions"
+  - heading "Selenium GRID Full Course by Bakkappa N" [level=3]:
+    - link "Selenium GRID Full Course by Bakkappa N 39 minutes":
+      - /url: /watch?v=uVS08EMxThk
+      - text: Selenium GRID Full Course by Bakkappa N
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 4.1K views 5 years ago
+  - button "More actions"
+  - heading "Cucumber BDD Framework Full Course by Bakkappa N" [level=3]:
+    - link "Cucumber BDD Framework Full Course by Bakkappa N 2 hours, 54 minutes":
+      - /url: /watch?v=Xw4Gok2i2pA
+      - text: Cucumber BDD Framework Full Course by Bakkappa N
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 13K views 6 years ago
+  - button "More actions"
+  - heading "Cucumber(BDD) Selenium Framework Full Course 2 by Bakkappa N" [level=3]:
+    - link "Cucumber(BDD) Selenium Framework Full Course 2 by Bakkappa N 3 hours, 51 minutes":
+      - /url: /watch?v=Ls9dCu7TTXU
+      - text: Cucumber(BDD) Selenium Framework Full Course 2 by Bakkappa N
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 4.6K views 6 years ago
+  - button "More actions"
+  - heading "Appium Full Course by Bakkappa N" [level=3]:
+    - link "Appium Full Course by Bakkappa N 3 hours, 8 minutes":
+      - /url: /watch?v=Xnxf6uK7V5Q
+      - text: Appium Full Course by Bakkappa N
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 11K views 6 years ago
+  - button "More actions"
+  - button "Next"
+  - heading "Popular videos" [level=2]:
+    - link "Popular videos":
+      - /url: /@testerstalk/videos?view=0&sort=p&shelf_id=9
+  - heading "Selenium C# Full Course by Bakkappa N" [level=3]:
+    - link "Selenium C# Full Course by Bakkappa N 4 hours, 58 minutes":
+      - /url: /watch?v=utfaE9Nv1FY
+      - text: Selenium C# Full Course by Bakkappa N
+  - group: 196K views 6 years ago
+  - button "More actions"
+  - heading "#1 Playwright Automation Using TypeScript Full Course 2026 | Playwright TypeScript Beginner Tutorial" [level=3]:
+    - link "#1 Playwright Automation Using TypeScript Full Course 2026 | Playwright TypeScript Beginner Tutorial 8 hours, 55 minutes":
+      - /url: /watch?v=788GvvcfwTY
+      - text: "#1 Playwright Automation Using TypeScript Full Course 2026 | Playwright TypeScript Beginner Tutorial"
+  - group: 195K views 1 year ago
+  - button "More actions"
+  - heading "#1 Playwright Tutorial Full Course 2026 | Playwright Testing Tutorial" [level=3]:
+    - link "#1 Playwright Tutorial Full Course 2026 | Playwright Testing Tutorial 6 hours, 55 minutes":
+      - /url: /watch?v=2poXBtifpzA
+      - text: "#1 Playwright Tutorial Full Course 2026 | Playwright Testing Tutorial"
+  - group: 172K views 2 years ago
+  - button "More actions"
+  - heading "API Testing Postman Tutorial Full Course 2024" [level=3]:
+    - link "API Testing Postman Tutorial Full Course 2024 2 hours, 43 minutes":
+      - /url: /watch?v=QKBa8lt5Wfo
+      - text: API Testing Postman Tutorial Full Course 2024
+  - group: 166K views 3 years ago
+  - button "More actions"
+  - heading "SpecFlow Selenium C# Tutorial Full Course | SpecFlow C# Tutorial | Selenium Automation Testing" [level=3]:
+    - link "SpecFlow Selenium C# Tutorial Full Course | SpecFlow C# Tutorial | Selenium Automation Testing 2 hours, 59 minutes":
+      - /url: /watch?v=7xPcalwU76c
+      - text: SpecFlow Selenium C# Tutorial Full Course | SpecFlow C# Tutorial | Selenium Automation Testing
+  - group: 85K views 3 years ago
+  - button "More actions"
+  - heading "Cypress Tutorial Full Course | Cypress Automation | Learn Cypress in 5 Hrs" [level=3]:
+    - link "Cypress Tutorial Full Course | Cypress Automation | Learn Cypress in 5 Hrs 5 hours, 4 minutes":
+      - /url: /watch?v=oJV5whmzfZI
+      - text: Cypress Tutorial Full Course | Cypress Automation | Learn Cypress in 5 Hrs
+  - group: 80K views 2 years ago
+  - button "More actions"
+  - button "Next"
+  - heading "Selenium Java Series By Bakkappa N Play all" [level=2]:
+    - link "Selenium Java Series By Bakkappa N":
+      - /url: /playlist?list=PLUeDIlio4THF20MOpq3wG1dyACBhB1uhU
+    - link "Play all":
+      - /url: /watch?v=nGGEu0BMUCQ&list=PLUeDIlio4THF20MOpq3wG1dyACBhB1uhU
+  - heading "How to Setup Selenium Maven Project from Scratch" [level=3]:
+    - link "How to Setup Selenium Maven Project from Scratch 25 minutes":
+      - /url: /watch?v=nGGEu0BMUCQ
+      - text: How to Setup Selenium Maven Project from Scratch
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 5.5K views 6 years ago
+  - button "More actions"
+  - heading "How to Perform Drap and Drop in Selenium WebDriver" [level=3]:
+    - link "How to Perform Drap and Drop in Selenium WebDriver 14 minutes, 18 seconds":
+      - /url: /watch?v=qEKPXAr07kk
+      - text: How to Perform Drap and Drop in Selenium WebDriver
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.2K views 6 years ago
+  - button "More actions"
+  - heading "How to Perform Mouse Hover in Selenium WebDriver by Bakkappa N" [level=3]:
+    - link "How to Perform Mouse Hover in Selenium WebDriver by Bakkappa N 11 minutes, 23 seconds":
+      - /url: /watch?v=k4NujBIVQWM
+      - text: How to Perform Mouse Hover in Selenium WebDriver by Bakkappa N
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.2K views 6 years ago
+  - button "More actions"
+  - heading "How to Select ul li tags Bootstrap Dropdown in Selenium WebDriver?" [level=3]:
+    - link "How to Select ul li tags Bootstrap Dropdown in Selenium WebDriver? 17 minutes":
+      - /url: /watch?v=WYES2God4ns
+      - text: How to Select ul li tags Bootstrap Dropdown in Selenium WebDriver?
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 13K views 6 years ago
+  - button "More actions"
+  - heading "Selenium 4 Features Part-1 || Handling Browser TABS and New Windows" [level=3]:
+    - link "Selenium 4 Features Part-1 || Handling Browser TABS and New Windows 27 minutes":
+      - /url: /watch?v=Ag8xJQnzFf0
+      - text: Selenium 4 Features Part-1 || Handling Browser TABS and New Windows
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.1K views 6 years ago
+  - button "More actions"
+  - heading "Selenium 4 Features Part-2 || How to take Screenshot of WebElement or WebPage?" [level=3]:
+    - link "Selenium 4 Features Part-2 || How to take Screenshot of WebElement or WebPage? 16 minutes":
+      - /url: /watch?v=5B2ojefh3fU
+      - text: Selenium 4 Features Part-2 || How to take Screenshot of WebElement or WebPage?
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 945 views 6 years ago
+  - button "More actions"
+  - button "Next"
+  - heading "Selenium GRID Tutorials Play all" [level=2]:
+    - link "Selenium GRID Tutorials":
+      - /url: /playlist?list=PLUeDIlio4THEt8EG3AH1M6SwuhvlxJru8
+    - link "Play all":
+      - /url: /watch?v=kevXwbatJvU&list=PLUeDIlio4THEt8EG3AH1M6SwuhvlxJru8
+  - text: Appium Selenium GRID tutorials, selenium grid, appium grid
+  - heading "Selenium GRID Tutorial-1 || Selenium GRID Set Up" [level=3]:
+    - link "Selenium GRID Tutorial-1 || Selenium GRID Set Up 14 minutes, 11 seconds":
+      - /url: /watch?v=kevXwbatJvU&pp=0gcJCU8LAYcqIYzv
+      - text: Selenium GRID Tutorial-1 || Selenium GRID Set Up
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 43K views 6 years ago
+  - button "More actions"
+  - heading "Selenium GRID Tutorial-2 || Selenium GRID Test Execution Chrome Firefox IE Browser" [level=3]:
+    - link "Selenium GRID Tutorial-2 || Selenium GRID Test Execution Chrome Firefox IE Browser 16 minutes":
+      - /url: /watch?v=m6S1qyTPxr4
+      - text: Selenium GRID Tutorial-2 || Selenium GRID Test Execution Chrome Firefox IE Browser
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 15K views 6 years ago
+  - button "More actions"
+  - heading "Selenium GRID Tutorial-3 || Selenium GRID Parallel Test Execution" [level=3]:
+    - link "Selenium GRID Tutorial-3 || Selenium GRID Parallel Test Execution 8 minutes, 49 seconds":
+      - /url: /watch?v=bNxg6-UyGvo
+      - text: Selenium GRID Tutorial-3 || Selenium GRID Parallel Test Execution
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 13K views 6 years ago
+  - button "More actions"
+  - heading "Appium Selenium GRID Tutorial-01 || Appium Selenium GRID Set Up" [level=3]:
+    - link "Appium Selenium GRID Tutorial-01 || Appium Selenium GRID Set Up 29 minutes":
+      - /url: /watch?v=V49d25lj59s
+      - text: Appium Selenium GRID Tutorial-01 || Appium Selenium GRID Set Up
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 14K views 6 years ago
+  - button "More actions"
+  - heading "Appium Selenium GRID Tutorial-02 || Appium Selenium GRID Test Execution" [level=3]:
+    - link "Appium Selenium GRID Tutorial-02 || Appium Selenium GRID Test Execution 20 minutes":
+      - /url: /watch?v=xsVJC_1zhQM
+      - text: Appium Selenium GRID Tutorial-02 || Appium Selenium GRID Test Execution
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 5.1K views 6 years ago
+  - button "More actions"
+  - heading "Appium Selenium GRID Tutorial-03 || Appium GRID Parallel Execution(Multiple Devices)" [level=3]:
+    - link "Appium Selenium GRID Tutorial-03 || Appium GRID Parallel Execution(Multiple Devices) 13 minutes, 18 seconds":
+      - /url: /watch?v=srEQSuC8FhQ
+      - text: Appium Selenium GRID Tutorial-03 || Appium GRID Parallel Execution(Multiple Devices)
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 7.8K views 6 years ago
+  - button "More actions"
+  - button "Next"
+  - heading "Selenium C# NUnit Tutorials by Bakkappa N Play all" [level=2]:
+    - link "Selenium C# NUnit Tutorials by Bakkappa N":
+      - /url: /playlist?list=PLUeDIlio4THFUMN7yLmgk9vFiDtph1UFC
+    - link "Play all":
+      - /url: /watch?v=Xgg5syf850g&list=PLUeDIlio4THFUMN7yLmgk9vFiDtph1UFC
+  - text: "#seleniumwebdriver #nunit #tutorials.net Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,Selenium C# NUnit Tutorials,"
+  - heading "Selenium C# .NET NUnit Tutorial-01 by Bakkappa N" [level=3]:
+    - link "Selenium C# .NET NUnit Tutorial-01 by Bakkappa N 40 minutes":
+      - /url: /watch?v=Xgg5syf850g
+      - text: Selenium C# .NET NUnit Tutorial-01 by Bakkappa N
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 43K views 7 years ago
+  - button "More actions"
+  - heading "Selenium C# .NET NUnit Tutorial-02 by Bakkappa N" [level=3]:
+    - link "Selenium C# .NET NUnit Tutorial-02 by Bakkappa N 39 minutes":
+      - /url: /watch?v=tUQ91G9FpKs
+      - text: Selenium C# .NET NUnit Tutorial-02 by Bakkappa N
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 12K views 7 years ago
+  - button "More actions"
+  - heading "Selenium C# .NET NUnit Tutorial-03 by Bakkappa N" [level=3]:
+    - link "Selenium C# .NET NUnit Tutorial-03 by Bakkappa N 49 minutes":
+      - /url: /watch?v=eZBQMdzkbOQ
+      - text: Selenium C# .NET NUnit Tutorial-03 by Bakkappa N
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 9.2K views 7 years ago
+  - button "More actions"
+  - heading "Selenium C# .NET NUnit Tutorial-04 by Bakkappa N" [level=3]:
+    - link "Selenium C# .NET NUnit Tutorial-04 by Bakkappa N 39 minutes":
+      - /url: /watch?v=u2PrYQuNpjU
+      - text: Selenium C# .NET NUnit Tutorial-04 by Bakkappa N
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 7.3K views 7 years ago
+  - button "More actions"
+  - heading "Selenium C# How to Generate Extent Reports by Bakkappa N" [level=3]:
+    - link "Selenium C# How to Generate Extent Reports by Bakkappa N 36 minutes":
+      - /url: /watch?v=d6lSJHqc-zY
+      - text: Selenium C# How to Generate Extent Reports by Bakkappa N
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 27K views 7 years ago
+  - button "More actions"
+  - heading "Selenium C# Page Object Model by Bakkappa N" [level=3]:
+    - link "Selenium C# Page Object Model by Bakkappa N 56 minutes":
+      - /url: /watch?v=3kkXatC3k3E
+      - text: Selenium C# Page Object Model by Bakkappa N
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 35K views 7 years ago
+  - button "More actions"
+  - button "Next"
+  - heading "Posts" [level=2]:
+    - link "Posts":
+      - /url: /channel/UCutQjK5N6zIT-vXqXa4WI0A/posts
+  - 'link "Testers Talk • 4 months ago Releasing video very soon! Stay tuned!!! #TestersTalk #Playwright #TestAutomation #Testing #QA #AI Like this post along with 10 other people tooltip 10 likes Dislike this post tooltip Share tooltip Comment tooltip"':
+    - link "Testers Talk":
+      - /url: /@testerstalk
+    - text: •
+    - link "4 months ago":
+      - /url: /post/Ugkx7N7kUPaXmI7_QU9IfZYn76uFGVQYUnhY
+    - text: Releasing video very soon! Stay tuned!!!
+    - link "#TestersTalk":
+      - /url: /hashtag/testerstalk
+    - link "#Playwright":
+      - /url: /hashtag/playwright
+    - link "#TestAutomation":
+      - /url: /hashtag/testautomation
+    - link "#Testing":
+      - /url: /hashtag/testing
+    - link "#QA":
+      - /url: /hashtag/qa
+    - link "#AI":
+      - /url: /hashtag/ai
+    - group
+    - link "Like this post along with 10 other people":
+      - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252F&hl=en
+    - tooltip "tooltip"
+    - text: "10"
+    - link "Dislike this post":
+      - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252F&hl=en
+    - tooltip "tooltip"
+    - button "Share"
+    - tooltip "tooltip"
+    - link "Comment":
+      - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fpost%252FUgkx7N7kUPaXmI7_QU9IfZYn76uFGVQYUnhY&hl=en
+    - tooltip "tooltip"
+  - 'link "Testers Talk • 6 months ago #Motivation #Career #Software #IT #Company #Growing #Learning #NewYear2025 #2025 #Goal #Mindset #Consistency #Change Like this post along with 8 other people tooltip 8 likes Dislike this post tooltip Share tooltip 1 comment tooltip"':
+    - link "Testers Talk":
+      - /url: /@testerstalk
+    - text: •
+    - link "6 months ago":
+      - /url: /post/Ugkxk5skoIfPyUeGsj_Oi5nG7z11gEM5tcHv
+    - link "#Motivation":
+      - /url: /hashtag/motivation
+    - link "#Career":
+      - /url: /hashtag/career
+    - link "#Software":
+      - /url: /hashtag/software
+    - link "#IT":
+      - /url: /hashtag/it
+    - link "#Company":
+      - /url: /hashtag/company
+    - link "#Growing":
+      - /url: /hashtag/growing
+    - link "#Learning":
+      - /url: /hashtag/learning
+    - link "#NewYear2025":
+      - /url: /hashtag/newyear2025
+    - link "#2025":
+      - /url: /hashtag/2025
+    - link "#Goal":
+      - /url: /hashtag/goal
+    - link "#Mindset":
+      - /url: /hashtag/mindset
+    - link "#Consistency":
+      - /url: /hashtag/consistency
+    - link "#Change":
+      - /url: /hashtag/change
+    - group
+    - link "Like this post along with 8 other people":
+      - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252F&hl=en
+    - tooltip "tooltip"
+    - text: "8"
+    - link "Dislike this post":
+      - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252F&hl=en
+    - tooltip "tooltip"
+    - button "Share"
+    - tooltip "tooltip"
+    - link "1 comment":
+      - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fpost%252FUgkxk5skoIfPyUeGsj_Oi5nG7z11gEM5tcHv&hl=en
+      - text: "1"
+    - tooltip "tooltip"
+  - link:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+    - text: •
+    - link "10 months ago":
+      - /url: /post/UgkxHwnRMPlMJF8U-BXHjqH2yWfNtDkinJ8f
+    - text: "🚀 Learn FREE Playwright Web + API Automation & Mocking + CICD Tools + AI(Playwright MCP) From Scratch 👉 Playwright Playlist :"
+    - link "https://www.youtube.com/watch?v=3Vk2m...":
+      - /url: /watch?v=3Vk2mlX1XYM&list=PLUeDIlio4THEXmQxNvKmdDxAVloGTHXMr&index=5
+    - text: 🚀 Playwright JavaScript by Testers Talk
+    - link "https://youtube.com/playlist?list=PLU...":
+      - /url: /playlist?list=PLUeDIlio4THFSOUcVo_Cfam8I_IO483mV
+    - text: "🚀 Cypress by Testers Talk #"
+    - link "https://youtube.com/playlist?list=PLU...":
+      - /url: /playlist?list=PLUeDIlio4THEbdE2jWyBBxkWqjk4JmHHq
+    - text: 🚀 JavaScript by Testers Talk P
+    - link "https://youtube.com/playlist?list=PLU...":
+      - /url: /playlist?list=PLUeDIlio4THFLrS29tJnP9yz-QKhn4mdB
+    - text: 🚀 Postman by Testers Talk l
+    - link "https://youtube.com/playlist?list=PLU...":
+      - /url: /playlist?list=PLUeDIlio4THGcgNP3_Ocb_I_l4ITai5QT
+    - text: 🚀 Rest Assured by Testers Talk a
+    - link "https://youtube.com/playlist?list=PLU...":
+      - /url: /playlist?list=PLUeDIlio4THGL7lQXQwxsV9re_i0U2b0Q
+    - text: 🚀 API Testing by Testers Talk y
+    - link "https://youtube.com/playlist?list=PLU...":
+      - /url: /playlist?list=PLUeDIlio4THGaSQ_s5WFc2Mo7Ikne2kA5
+    - text: 💥 Subscribe for Daily Updates r
+    - link "https://www.youtube.com/@testerstalk?...":
+      - /url: https://www.youtube.com/@testerstalk?sub_confirmation=1
+    - link "#Playwright":
+      - /url: /hashtag/playwright
+    - link "#Web":
+      - /url: /hashtag/web
+    - link "#API":
+      - /url: /hashtag/api
+    - link "#UI":
+      - /url: /hashtag/ui
+    - link "#PlaywrightMCP":
+      - /url: /hashtag/playwrightmcp
+    - link "#MCPServer":
+      - /url: /hashtag/mcpserver
+    - link "#Testing":
+      - /url: /hashtag/testing
+    - link "#QA":
+      - /url: /hashtag/qa
+    - link "#SDET":
+      - /url: /hashtag/sdet
+    - link "#TestAutomation":
+      - /url: /hashtag/testautomation
+    - link "#TestersTalk":
+      - /url: /hashtag/testerstalk
+    - group
+    - link "Like this post along with 7 other people":
+      - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252F&hl=en
+    - tooltip "tooltip"
+    - text: "7"
+    - link "Dislike this post":
+      - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252F&hl=en
+    - tooltip "tooltip"
+    - button "Share"
+    - tooltip "tooltip"
+    - link "1 comment":
+      - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fpost%252FUgkxHwnRMPlMJF8U-BXHjqH2yWfNtDkinJ8f&hl=en
+      - text: "1"
+    - tooltip "tooltip"
+  - link "Testers Talk • 10 months ago Playwright MCP with Banking Project is LIVE now! Don't miss out to check it. URL - https://www.youtube.com/watch?v=3Vk2m... Like this post along with 2 other people tooltip 2 likes Dislike this post tooltip Share tooltip Comment tooltip":
+    - link "Testers Talk":
+      - /url: /@testerstalk
+    - text: •
+    - link "10 months ago":
+      - /url: /post/UgkxY7NRQD84mFy2NzDdbph1ExOapxB3JGCT
+    - text: Playwright MCP with Banking Project is LIVE now! Don't miss out to check it. URL -
+    - link "https://www.youtube.com/watch?v=3Vk2m...":
+      - /url: /watch?v=3Vk2mlX1XYM&list=PLUeDIlio4THEXmQxNvKmdDxAVloGTHXMr&index=6
+    - group
+    - link "Like this post along with 2 other people":
+      - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252F&hl=en
+    - tooltip "tooltip"
+    - text: "2"
+    - link "Dislike this post":
+      - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252F&hl=en
+    - tooltip "tooltip"
+    - button "Share"
+    - tooltip "tooltip"
+    - link "Comment":
+      - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fpost%252FUgkxY7NRQD84mFy2NzDdbph1ExOapxB3JGCT&hl=en
+    - tooltip "tooltip"
+  - 'link "Testers Talk • 1 year ago 🔥🔥India Vs Pakistan, Who will win today''s match? #India #Pakistan #Cricket #ChampionsTrophy #2025 #UAE #Dubai 83 votes Vote now Like this post along with 4 other people tooltip 4 likes Dislike this post tooltip Share tooltip Comment tooltip"':
+    - link "Testers Talk":
+      - /url: /@testerstalk
+    - text: •
+    - link "1 year ago":
+      - /url: /post/UgkxFEnsgqDuvAYGwtYOoBY8SvPQUsUE5WtX
+    - text: 🔥🔥India Vs Pakistan, Who will win today's match?
+    - link "#India":
+      - /url: /hashtag/india
+    - link "#Pakistan":
+      - /url: /hashtag/pakistan
+    - link "#Cricket":
+      - /url: /hashtag/cricket
+    - link "#ChampionsTrophy":
+      - /url: /hashtag/championstrophy
+    - link "#2025":
+      - /url: /hashtag/2025
+    - link "#UAE":
+      - /url: /hashtag/uae
+    - link "#Dubai":
+      - /url: /hashtag/dubai
+    - text: 83 votes
+    - link "Vote now":
+      - /url: /post/UgkxFEnsgqDuvAYGwtYOoBY8SvPQUsUE5WtX
+    - link "Like this post along with 4 other people":
+      - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252F&hl=en
+    - tooltip "tooltip"
+    - text: "4"
+    - link "Dislike this post":
+      - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252F&hl=en
+    - tooltip "tooltip"
+    - button "Share"
+    - tooltip "tooltip"
+    - link "Comment":
+      - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fpost%252FUgkxFEnsgqDuvAYGwtYOoBY8SvPQUsUE5WtX&hl=en
+    - tooltip "tooltip"
+  - link "Testers Talk • 1 year ago Like this post along with 6 other people tooltip 6 likes Dislike this post tooltip Share tooltip 1 comment tooltip":
+    - link "Testers Talk":
+      - /url: /@testerstalk
+    - text: •
+    - link "1 year ago":
+      - /url: /post/UgkxePyi2uHKKubq9Qu-Veh31Ws3KKUzaS8F
+    - group
+    - link "Like this post along with 6 other people":
+      - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252F&hl=en
+    - tooltip "tooltip"
+    - text: "6"
+    - link "Dislike this post":
+      - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252F&hl=en
+    - tooltip "tooltip"
+    - button "Share"
+    - tooltip "tooltip"
+    - link "1 comment":
+      - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fpost%252FUgkxePyi2uHKKubq9Qu-Veh31Ws3KKUzaS8F&hl=en
+      - text: "1"
+    - tooltip "tooltip"
+  - button "Next"
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from "@playwright/test";
+  2  | import testData from "../../test-data/qa/testdata.json";
+  3  | 
+  4  | type TestData = {
+  5  |   TestDatSet1: {
+  6  |     Skill1: string;
+  7  |     Skill2: string;
+  8  |   };
+  9  |   TestDatSet2: {
+  10 |     Skill1: string;
+  11 |     Skill2: string;
+  12 |   };
+  13 | };
+  14 | const typedTestData = testData as TestData;
+  15 | 
+  16 | for (const data in typedTestData) {
+  17 |   const skill = typedTestData[data as keyof TestData];
+  18 |   console.log(skill.Skill1);
+  19 |   console.log(skill.Skill2);
+  20 | 
+  21 |   test(`Data Driven Testing Using JSON file in playwright: ${skill.Skill1}`, async ({
+  22 |     page,
+  23 |   }) => {
+  24 |     // Go to URL
+  25 |     await page.goto(`${process.env.YOUTUBE_URL}`);
+  26 |     // Wait for the page to load
+  27 |     await page.waitForLoadState("domcontentloaded");
+  28 | 
+  29 |     // Verify URL, title, text, count,
+  30 |     await page.locator("//input[@name='search_query']").first().click();
+  31 |     await page.locator("//input[@name='search_query']").fill(skill.Skill1);
+  32 |     await page.locator("//input[@name='search_query']").press("Enter");
+  33 | 
+> 34 |     await expect(page).toHaveTitle(skill.Skill1 + "☑️ - YouTube");
+     |                        ^ Error: expect(page).toHaveTitle(expected) failed
+  35 |   });
+  36 | }
+  37 | 
+```

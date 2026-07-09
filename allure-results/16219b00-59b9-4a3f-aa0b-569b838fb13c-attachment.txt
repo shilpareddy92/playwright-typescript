@@ -1,0 +1,21 @@
+Text from 1st for loop: serverlessTest
+Text from 1st for loop: apigw-lambda-authorize
+Text from 1st for loop: lambda-s3
+Text from 1st for loop: testing_CI
+Text from 1st for loop: playwright-jenkins
+==========================
+Text from 2nd for loop: 
+                serverlessTest
+              
+Text from 2nd for loop: 
+                apigw-lambda-authorize
+              
+Text from 2nd for loop: 
+                lambda-s3
+              
+Text from 2nd for loop: 
+                testing_CI
+              
+Text from 2nd for loop: 
+                playwright-jenkins
+              

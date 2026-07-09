@@ -1,0 +1,2 @@
+Text execution started
+Tests are running in qa env.

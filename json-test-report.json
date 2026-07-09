@@ -1,0 +1,171 @@
+{
+  "config": {
+    "argv": [],
+    "configFile": "/Users/shilpavallapureddy/Documents/PlaywrightTS/playwright.config.ts",
+    "rootDir": "/Users/shilpavallapureddy/Documents/PlaywrightTS/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 60000,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Google Chrome",
+        "name": "Google Chrome",
+        "testDir": "/Users/shilpavallapureddy/Documents/PlaywrightTS/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "dot",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "json-test-report.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "junit-test-report.xml"
+        }
+      ],
+      [
+        "/Users/shilpavallapureddy/Documents/PlaywrightTS/node_modules/allure-playwright/dist/cjs/index.js",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "3way",
+    "version": "1.61.1",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "Chapter05/08_RunTestBasedOnEnv.spec.ts",
+      "file": "Chapter05/08_RunTestBasedOnEnv.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Optimized Page Object Model Test in Playwright",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Google Chrome",
+              "projectName": "Google Chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3202,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Global before is running...\n"
+                    },
+                    {
+                      "text": "Tests are running in dev env.\n"
+                    },
+                    {
+                      "text": "Skill : API Testing by Testers Talk\n"
+                    },
+                    {
+                      "text": "Skill : Rest Assured by Testers Talk\n"
+                    },
+                    {
+                      "text": "Skill : Postman by Testers Talk\n"
+                    },
+                    {
+                      "text": "Skill : undefined\n"
+                    },
+                    {
+                      "text": "Skill : undefined\n"
+                    },
+                    {
+                      "text": "Skill : undefined\n"
+                    },
+                    {
+                      "text": "Skill : undefined\n"
+                    },
+                    {
+                      "text": "Global afterEach is running...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-09T09:28:53.776Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/Chapter05-08_RunTestBasedO-a5608-ct-Model-Test-in-Playwright-Google-Chrome/test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/Chapter05-08_RunTestBasedO-a5608-ct-Model-Test-in-Playwright-Google-Chrome/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "96f0cf1a866cfbd522a0-7e5497f8b626472713b3",
+          "file": "Chapter05/08_RunTestBasedOnEnv.spec.ts",
+          "line": 5,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-09T09:28:53.461Z",
+    "duration": 4203.362,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,78 @@
+Running Tests:
+# Run all tests
+npx playwright test
+
+# Run a specific test file
+npx playwright test Chapter1/02_First_Test.spec.ts
+
+# Run tests in a specific browser
+npx playwright test Chapter1/02_First_Test.spec.ts --project=firefox
+
+# Run a specific test by title
+npx playwright test -g "Login Test"
+
+# Run tests in headed mode
+npx playwright test --headed
+
+# Run tests in debug mode
+npx playwright test --debug
+
+# Run only failed tests
+npx playwright test --last-failed
+
+# Run tests with only one worker
+npx playwright test --workers=1
+
+# Run tests in UI mode
+npx playwright test --ui
+
+Code Generation:
+# Generate Playwright tests by recording actions
+npx playwright codegen
+
+# Generate for a specific website
+npx playwright codegen https://example.com
+
+Reports:
+# Open the HTML report
+npx playwright show-report
+
+Useful Debugging:
+# Run with trace collection
+npx playwright test --trace on
+
+# Retain trace only on failure
+npx playwright test --trace retain-on-failure
+
+# Capture screenshots on failure
+npx playwright test --screenshot only-on-failure
+
+# Record video on failure
+npx playwright test --video retain-on-failure
+
+Installation & Setup:
+# Install Playwright
+npm init playwright@latest
+
+# Install browser binaries
+npx playwright install
+
+# Install a specific browser
+npx playwright install chromium
+
+# Update Playwright
+npm install -D @playwright/test@latest
+npx playwright install
+
+Listing Tests:# List all discovered tests
+npx playwright test --list
+
+Your Current Essential Commands:
+npx playwright test
+npx playwright test --ui
+npx playwright test example
+npx playwright test --debug
+npx playwright codegen
+npx playwright show-report
+npx playwright test Chapter1/02_First_Test.spec.ts
+npx playwright test Chapter1/02_First_Test.spec.ts --project=firefox
