@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Strawberry",
+    "id": 3
+  },
+  {
+    "name": "Banana",
+    "id": 1
+  },
+  {
+    "name": "rest assured by testers talk",
+    "id": 101
+  },
+  {
+    "name": "postman by testers talk",
+    "id": 102
+  },
+  {
+    "name": "api testing by testers talk",
+    "id": 103
+  },
+  {
+    "name": "cypress by testers talk",
+    "id": 104
+  },
+  {
+    "name": "playwright by testers talk",
+    "id": 105
+  }
+]

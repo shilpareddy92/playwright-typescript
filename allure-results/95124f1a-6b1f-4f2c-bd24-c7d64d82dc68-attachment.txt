@@ -1,0 +1,20 @@
+POST API Response : {
+  "bookingid": 4459,
+  "booking": {
+    "firstname": "Furman",
+    "lastname": "Russel",
+    "totalprice": 8675,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2026-07-10",
+      "checkout": "2026-12-21"
+    },
+    "additionalneeds": "Dinner"
+  }
+}
+Booking Id : 4459
+GET API Response : [
+  {
+    "bookingid": 4459
+  }
+]

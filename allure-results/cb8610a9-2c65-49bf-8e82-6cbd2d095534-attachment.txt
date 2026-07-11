@@ -1,0 +1,14 @@
+POST API Response : {
+  "bookingid": 2710,
+  "booking": {
+    "firstname": "Golda",
+    "lastname": "Gottlieb",
+    "totalprice": 4415,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2026-07-10",
+      "checkout": "2026-07-16"
+    },
+    "additionalneeds": "Dinner"
+  }
+}

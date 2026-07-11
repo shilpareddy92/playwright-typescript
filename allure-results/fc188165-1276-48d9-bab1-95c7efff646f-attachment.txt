@@ -1,0 +1,27 @@
+POST API Response : {
+  "bookingid": 2036,
+  "booking": {
+    "firstname": "Simon",
+    "lastname": "Ziemann",
+    "totalprice": 7898,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2026-07-09",
+      "checkout": "2026-12-19"
+    },
+    "additionalneeds": "Dinner"
+  }
+}
+Booking Id : 2036
+GET API Response : {
+  "firstname": "Simon",
+  "lastname": "Ziemann",
+  "totalprice": 7898,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-07-09",
+    "checkout": "2026-12-19"
+  },
+  "additionalneeds": "Dinner"
+}
+Token : 763a58208e7a474

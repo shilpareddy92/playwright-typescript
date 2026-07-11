@@ -1,0 +1,38 @@
+POST API Response : {
+  "bookingid": 11,
+  "booking": {
+    "firstname": "Jed",
+    "lastname": "Lynch",
+    "totalprice": 8858,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2026-07-10",
+      "checkout": "2026-07-11"
+    },
+    "additionalneeds": "Lunch"
+  }
+}
+Booking Id : 11
+GET API Response : {
+  "firstname": "Jed",
+  "lastname": "Lynch",
+  "totalprice": 8858,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-07-10",
+    "checkout": "2026-07-11"
+  },
+  "additionalneeds": "Lunch"
+}
+Token : 44c8caa1f047441
+PUT API Response : {
+  "firstname": "cypress by testers talk",
+  "lastname": "javascript by testers talk",
+  "totalprice": 1000,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2025-01-15",
+    "checkout": "2025-01-17"
+  },
+  "additionalneeds": "breakfast"
+}

@@ -1,0 +1,140 @@
+POST API Response : {
+  "bookingid": 4727,
+  "booking": {
+    "firstname": "Magdalen",
+    "lastname": "Feil",
+    "totalprice": 5510,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2026-07-09",
+      "checkout": "2027-01-06"
+    },
+    "additionalneeds": "Airport Pickup"
+  }
+}
+Booking Id : 4727
+GET API Response : {
+  "firstname": "Magdalen",
+  "lastname": "Feil",
+  "totalprice": 5510,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-07-09",
+    "checkout": "2027-01-06"
+  },
+  "additionalneeds": "Airport Pickup"
+}
+Token : c02b7c132b9e371
+PUT API Response : {
+  "_apiName": "APIResponse",
+  "_request": {
+    "_type": "APIRequestContext",
+    "_guid": "request-context@7b4afd908606d2ff36f459c26b7598f9"
+  },
+  "_initializer": {
+    "fetchUid": "dd45c99f87569f7c8e5b7000434007d5",
+    "url": "https://restful-booker.herokuapp.com/booking/4727",
+    "status": 200,
+    "statusText": "OK",
+    "headers": [
+      {
+        "name": "Content-Length",
+        "value": "182"
+      },
+      {
+        "name": "Content-Type",
+        "value": "application/json; charset=utf-8"
+      },
+      {
+        "name": "Date",
+        "value": "Fri, 10 Jul 2026 06:14:20 GMT"
+      },
+      {
+        "name": "Etag",
+        "value": "W/\"b6-UCLvc5bAHFeHw8nLKjB+o9Xp09Y\""
+      },
+      {
+        "name": "Nel",
+        "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+      },
+      {
+        "name": "Report-To",
+        "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=WtfMdlvJclKMzzOGGtx0xCm4XTYu5JJsg%2FAdwremcQA%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1783664060\"}],\"max_age\":3600}"
+      },
+      {
+        "name": "Reporting-Endpoints",
+        "value": "heroku-nel=\"https://nel.heroku.com/reports?s=WtfMdlvJclKMzzOGGtx0xCm4XTYu5JJsg%2FAdwremcQA%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1783664060\""
+      },
+      {
+        "name": "Server",
+        "value": "Heroku"
+      },
+      {
+        "name": "Via",
+        "value": "1.1 heroku-router"
+      },
+      {
+        "name": "X-Powered-By",
+        "value": "Express"
+      }
+    ],
+    "securityDetails": {
+      "issuer": "Amazon RSA 2048 M01",
+      "protocol": "TLSv1.2",
+      "subjectName": "*.herokuapp.com",
+      "validFrom": 1767225600,
+      "validTo": 1801267199
+    },
+    "serverAddr": {
+      "ipAddress": "::ffff:23.22.130.173",
+      "port": 443
+    }
+  },
+  "_headers": {
+    "_headersMap": {
+      "_map": {}
+    },
+    "_headersArray": [
+      {
+        "name": "Content-Length",
+        "value": "182"
+      },
+      {
+        "name": "Content-Type",
+        "value": "application/json; charset=utf-8"
+      },
+      {
+        "name": "Date",
+        "value": "Fri, 10 Jul 2026 06:14:20 GMT"
+      },
+      {
+        "name": "Etag",
+        "value": "W/\"b6-UCLvc5bAHFeHw8nLKjB+o9Xp09Y\""
+      },
+      {
+        "name": "Nel",
+        "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+      },
+      {
+        "name": "Report-To",
+        "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=WtfMdlvJclKMzzOGGtx0xCm4XTYu5JJsg%2FAdwremcQA%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1783664060\"}],\"max_age\":3600}"
+      },
+      {
+        "name": "Reporting-Endpoints",
+        "value": "heroku-nel=\"https://nel.heroku.com/reports?s=WtfMdlvJclKMzzOGGtx0xCm4XTYu5JJsg%2FAdwremcQA%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1783664060\""
+      },
+      {
+        "name": "Server",
+        "value": "Heroku"
+      },
+      {
+        "name": "Via",
+        "value": "1.1 heroku-router"
+      },
+      {
+        "name": "X-Powered-By",
+        "value": "Express"
+      }
+    ]
+  }
+}

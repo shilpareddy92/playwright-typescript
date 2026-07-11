@@ -1,6 +1,12 @@
 {
   "config": {
-    "argv": [],
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/shilpavallapureddy/Documents/PlaywrightTS/node_modules/.bin/playwright",
+      "test",
+      "--grep",
+      "PlaywrightWithJenkins"
+    ],
     "configFile": "/Users/shilpavallapureddy/Documents/PlaywrightTS/playwright.config.ts",
     "rootDir": "/Users/shilpavallapureddy/Documents/PlaywrightTS/tests",
     "failOnFlakyTests": false,
@@ -13,7 +19,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 3
     },
     "preserveOutput": "always",
     "projects": [
@@ -22,7 +28,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 3
         },
         "id": "Google Chrome",
         "name": "Google Chrome",
@@ -68,22 +74,24 @@
     "shard": null,
     "tags": [],
     "updateSnapshots": "missing",
-    "updateSourceMethod": "3way",
+    "updateSourceMethod": "patch",
     "version": "1.61.1",
     "workers": 4,
     "webServer": null
   },
   "suites": [
     {
-      "title": "Chapter05/08_RunTestBasedOnEnv.spec.ts",
-      "file": "Chapter05/08_RunTestBasedOnEnv.spec.ts",
+      "title": "Chapter01/04_Codegen_Test.spec.ts",
+      "file": "Chapter01/04_Codegen_Test.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Optimized Page Object Model Test in Playwright",
+          "title": "Codegen_Test_spec",
           "ok": true,
-          "tags": [],
+          "tags": [
+            "PlaywrightWithJenkins"
+          ],
           "tests": [
             {
               "timeout": 120000,
@@ -96,54 +104,23 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3202,
+                  "duration": 6848,
                   "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Global before is running...\n"
-                    },
-                    {
-                      "text": "Tests are running in dev env.\n"
-                    },
-                    {
-                      "text": "Skill : API Testing by Testers Talk\n"
-                    },
-                    {
-                      "text": "Skill : Rest Assured by Testers Talk\n"
-                    },
-                    {
-                      "text": "Skill : Postman by Testers Talk\n"
-                    },
-                    {
-                      "text": "Skill : undefined\n"
-                    },
-                    {
-                      "text": "Skill : undefined\n"
-                    },
-                    {
-                      "text": "Skill : undefined\n"
-                    },
-                    {
-                      "text": "Skill : undefined\n"
-                    },
-                    {
-                      "text": "Global afterEach is running...\n"
-                    }
-                  ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-09T09:28:53.776Z",
+                  "startTime": "2026-07-11T03:06:43.187Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/Chapter05-08_RunTestBasedO-a5608-ct-Model-Test-in-Playwright-Google-Chrome/test-finished-1.png"
+                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/Chapter01-04_Codegen_Test-Codegen-Test-spec-Google-Chrome/test-finished-1.png"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/Chapter05-08_RunTestBasedO-a5608-ct-Model-Test-in-Playwright-Google-Chrome/trace.zip"
+                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/Chapter01-04_Codegen_Test-Codegen-Test-spec-Google-Chrome/trace.zip"
                     }
                   ]
                 }
@@ -151,9 +128,156 @@
               "status": "expected"
             }
           ],
-          "id": "96f0cf1a866cfbd522a0-7e5497f8b626472713b3",
-          "file": "Chapter05/08_RunTestBasedOnEnv.spec.ts",
-          "line": 5,
+          "id": "862dabe61a597ca2ac1a-53a68f8d3567c8b5391d",
+          "file": "Chapter01/04_Codegen_Test.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "Test 2 will fail",
+          "ok": false,
+          "tags": [
+            "PlaywrightWithJenkins"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Google Chrome",
+              "projectName": "Google Chrome",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 3529,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n    at /Users/shilpavallapureddy/Documents/PlaywrightTS/tests/Chapter01/04_Codegen_Test.spec.ts:13:16",
+                    "location": {
+                      "file": "/Users/shilpavallapureddy/Documents/PlaywrightTS/tests/Chapter01/04_Codegen_Test.spec.ts",
+                      "column": 16,
+                      "line": 13
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 11 |\u001b[39m test(\u001b[32m'Test 2 will fail'\u001b[39m\u001b[33m,\u001b[39m { tag\u001b[33m:\u001b[39m [\u001b[32m'@PlaywrightWithJenkins'\u001b[39m] }\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://www.youtube.com/@testerstalk'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   expect(\u001b[36mtrue\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/shilpavallapureddy/Documents/PlaywrightTS/tests/Chapter01/04_Codegen_Test.spec.ts",
+                        "column": 16,
+                        "line": 13
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n\n\u001b[0m \u001b[90m 11 |\u001b[39m test(\u001b[32m'Test 2 will fail'\u001b[39m\u001b[33m,\u001b[39m { tag\u001b[33m:\u001b[39m [\u001b[32m'@PlaywrightWithJenkins'\u001b[39m] }\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://www.youtube.com/@testerstalk'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   expect(\u001b[36mtrue\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/shilpavallapureddy/Documents/PlaywrightTS/tests/Chapter01/04_Codegen_Test.spec.ts:13:16\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-11T03:06:43.192Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/Chapter01-04_Codegen_Test-Test-2-will-fail-Google-Chrome/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/Chapter01-04_Codegen_Test-Test-2-will-fail-Google-Chrome/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/Chapter01-04_Codegen_Test-Test-2-will-fail-Google-Chrome/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/shilpavallapureddy/Documents/PlaywrightTS/tests/Chapter01/04_Codegen_Test.spec.ts",
+                    "column": 16,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "862dabe61a597ca2ac1a-b8e1a63c205d89583e12",
+          "file": "Chapter01/04_Codegen_Test.spec.ts",
+          "line": 11,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "Chapter06/08_DELETE_API_Request.spec.ts",
+      "file": "Chapter06/08_DELETE_API_Request.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Create DELETE API Request using playwright & typescript",
+          "ok": true,
+          "tags": [
+            "PlaywrightWithJenkins",
+            "PlaywrightWithAzureDevOpsPipeline",
+            "PlaywrightWithGitHubActions"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Google Chrome",
+              "projectName": "Google Chrome",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 1942,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "POST API Response : {\n  \"bookingid\": 3073,\n  \"booking\": {\n    \"firstname\": \"Athena\",\n    \"lastname\": \"Walsh\",\n    \"totalprice\": 5072,\n    \"depositpaid\": true,\n    \"bookingdates\": {\n      \"checkin\": \"2026-07-10\",\n      \"checkout\": \"2026-11-01\"\n    },\n    \"additionalneeds\": \"Extra Bed\"\n  }\n}\n"
+                    },
+                    {
+                      "text": "Booking Id : 3073\n"
+                    },
+                    {
+                      "text": "GET API Response : {\n  \"firstname\": \"Athena\",\n  \"lastname\": \"Walsh\",\n  \"totalprice\": 5072,\n  \"depositpaid\": true,\n  \"bookingdates\": {\n    \"checkin\": \"2026-07-10\",\n    \"checkout\": \"2026-11-01\"\n  },\n  \"additionalneeds\": \"Extra Bed\"\n}\n"
+                    },
+                    {
+                      "text": "Token : 689a71ea8c07bb4\n"
+                    },
+                    {
+                      "text": "GET API Response : {\n  \"_apiName\": \"APIResponse\",\n  \"_request\": {\n    \"_type\": \"APIRequestContext\",\n    \"_guid\": \"request-context@d3fb269e2f15bec09cc926c735081b93\"\n  },\n  \"_initializer\": {\n    \"fetchUid\": \"72237ebcd88fb840c4010b840f2e3f67\",\n    \"url\": \"https://restful-booker.herokuapp.com/booking/3073\",\n    \"status\": 200,\n    \"statusText\": \"OK\",\n    \"headers\": [\n      {\n        \"name\": \"Content-Length\",\n        \"value\": \"178\"\n      },\n      {\n        \"name\": \"Content-Type\",\n        \"value\": \"application/json; charset=utf-8\"\n      },\n      {\n        \"name\": \"Date\",\n        \"value\": \"Sat, 11 Jul 2026 03:06:44 GMT\"\n      },\n      {\n        \"name\": \"Etag\",\n        \"value\": \"W/\\\"b2-63+btgQTPoZ+NtAziNMcbD0JdWM\\\"\"\n      },\n      {\n        \"name\": \"Nel\",\n        \"value\": \"{\\\"report_to\\\":\\\"heroku-nel\\\",\\\"response_headers\\\":[\\\"Via\\\"],\\\"max_age\\\":3600,\\\"success_fraction\\\":0.01,\\\"failure_fraction\\\":0.1}\"\n      },\n      {\n        \"name\": \"Report-To\",\n        \"value\": \"{\\\"group\\\":\\\"heroku-nel\\\",\\\"endpoints\\\":[{\\\"url\\\":\\\"https://nel.heroku.com/reports?s=k3q5hE2oJ1XrCenpx%2B0QbB1wzQfiZgczNyZYxiqeIdc%3D\\\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\\\u0026ts=1783739204\\\"}],\\\"max_age\\\":3600}\"\n      },\n      {\n        \"name\": \"Reporting-Endpoints\",\n        \"value\": \"heroku-nel=\\\"https://nel.heroku.com/reports?s=k3q5hE2oJ1XrCenpx%2B0QbB1wzQfiZgczNyZYxiqeIdc%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1783739204\\\"\"\n      },\n      {\n        \"name\": \"Server\",\n        \"value\": \"Heroku\"\n      },\n      {\n        \"name\": \"Via\",\n        \"value\": \"1.1 heroku-router\"\n      },\n      {\n        \"name\": \"X-Powered-By\",\n        \"value\": \"Express\"\n      }\n    ],\n    \"securityDetails\": {\n      \"issuer\": \"Amazon RSA 2048 M01\",\n      \"protocol\": \"TLSv1.2\",\n      \"subjectName\": \"*.herokuapp.com\",\n      \"validFrom\": 1767225600,\n      \"validTo\": 1801267199\n    },\n    \"serverAddr\": {\n      \"ipAddress\": \"::ffff:107.22.57.98\",\n      \"port\": 443\n    }\n  },\n  \"_headers\": {\n    \"_headersMap\": {\n      \"_map\": {}\n    },\n    \"_headersArray\": [\n      {\n        \"name\": \"Content-Length\",\n        \"value\": \"178\"\n      },\n      {\n        \"name\": \"Content-Type\",\n        \"value\": \"application/json; charset=utf-8\"\n      },\n      {\n        \"name\": \"Date\",\n        \"value\": \"Sat, 11 Jul 2026 03:06:44 GMT\"\n      },\n      {\n        \"name\": \"Etag\",\n        \"value\": \"W/\\\"b2-63+btgQTPoZ+NtAziNMcbD0JdWM\\\"\"\n      },\n      {\n        \"name\": \"Nel\",\n        \"value\": \"{\\\"report_to\\\":\\\"heroku-nel\\\",\\\"response_headers\\\":[\\\"Via\\\"],\\\"max_age\\\":3600,\\\"success_fraction\\\":0.01,\\\"failure_fraction\\\":0.1}\"\n      },\n      {\n        \"name\": \"Report-To\",\n        \"value\": \"{\\\"group\\\":\\\"heroku-nel\\\",\\\"endpoints\\\":[{\\\"url\\\":\\\"https://nel.heroku.com/reports?s=k3q5hE2oJ1XrCenpx%2B0QbB1wzQfiZgczNyZYxiqeIdc%3D\\\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\\\u0026ts=1783739204\\\"}],\\\"max_age\\\":3600}\"\n      },\n      {\n        \"name\": \"Reporting-Endpoints\",\n        \"value\": \"heroku-nel=\\\"https://nel.heroku.com/reports?s=k3q5hE2oJ1XrCenpx%2B0QbB1wzQfiZgczNyZYxiqeIdc%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1783739204\\\"\"\n      },\n      {\n        \"name\": \"Server\",\n        \"value\": \"Heroku\"\n      },\n      {\n        \"name\": \"Via\",\n        \"value\": \"1.1 heroku-router\"\n      },\n      {\n        \"name\": \"X-Powered-By\",\n        \"value\": \"Express\"\n      }\n    ]\n  }\n}\n"
+                    },
+                    {
+                      "text": "DELETE API Response : Created\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-11T03:06:43.242Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/Chapter06-08_DELETE_API_Re-2824f-using-playwright-typescript-Google-Chrome/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eb11e47bb7fa76cd0506-0bf2b516547e89045e0f",
+          "file": "Chapter06/08_DELETE_API_Request.spec.ts",
+          "line": 18,
           "column": 5
         }
       ]
@@ -161,11 +285,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-09T09:28:53.461Z",
-    "duration": 4203.362,
-    "expected": 1,
+    "startTime": "2026-07-11T03:06:42.882Z",
+    "duration": 8105.657,
+    "expected": 2,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }

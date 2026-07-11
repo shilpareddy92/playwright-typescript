@@ -1,0 +1,27 @@
+POST API Response : {
+  "bookingid": 4602,
+  "booking": {
+    "firstname": "Joanny",
+    "lastname": "Raynor",
+    "totalprice": 9113,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2026-07-09",
+      "checkout": "2027-01-16"
+    },
+    "additionalneeds": "Lunch"
+  }
+}
+Booking Id : 4602
+GET API Response : {
+  "firstname": "Joanny",
+  "lastname": "Raynor",
+  "totalprice": 9113,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-07-09",
+    "checkout": "2027-01-16"
+  },
+  "additionalneeds": "Lunch"
+}
+Token : 7f1a2eeefac7414

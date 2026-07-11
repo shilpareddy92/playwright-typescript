@@ -1,0 +1,27 @@
+POST API Response : {
+  "bookingid": 3682,
+  "booking": {
+    "firstname": "Gloria",
+    "lastname": "Turcotte",
+    "totalprice": 6804,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2026-07-09",
+      "checkout": "2027-01-29"
+    },
+    "additionalneeds": "Late Checkout"
+  }
+}
+Booking Id : 3682
+GET API Response : {
+  "firstname": "Gloria",
+  "lastname": "Turcotte",
+  "totalprice": 6804,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-07-09",
+    "checkout": "2027-01-29"
+  },
+  "additionalneeds": "Late Checkout"
+}
+Token : 449decdc6b97352

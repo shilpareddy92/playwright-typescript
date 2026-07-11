@@ -1,0 +1,14 @@
+POST API Response : {
+  "bookingid": 6053,
+  "booking": {
+    "firstname": "cypress by testers talk",
+    "lastname": "javascript by testers talk",
+    "totalprice": 2000,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "0NaN-aN-aN",
+      "checkout": "2026-07-10"
+    },
+    "additionalneeds": "2026-07-11"
+  }
+}

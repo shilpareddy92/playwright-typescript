@@ -1,0 +1,38 @@
+POST API Response : {
+  "bookingid": 2580,
+  "booking": {
+    "firstname": "Dewayne",
+    "lastname": "Beier",
+    "totalprice": 3558,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2026-07-09",
+      "checkout": "2027-01-31"
+    },
+    "additionalneeds": "Extra Bed"
+  }
+}
+Booking Id : 2580
+GET API Response : {
+  "firstname": "Dewayne",
+  "lastname": "Beier",
+  "totalprice": 3558,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2026-07-09",
+    "checkout": "2027-01-31"
+  },
+  "additionalneeds": "Extra Bed"
+}
+Token : 09f8a50a76182d2
+PUT API Response : {
+  "firstname": "cypress by testers talk",
+  "lastname": "javascript by testers talk",
+  "totalprice": 1000,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2025-01-15",
+    "checkout": "2025-01-17"
+  },
+  "additionalneeds": "breakfast"
+}
