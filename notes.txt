@@ -76,3 +76,26 @@ npx playwright codegen
 npx playwright show-report
 npx playwright test Chapter1/02_First_Test.spec.ts
 npx playwright test Chapter1/02_First_Test.spec.ts --project=firefox
+
+Installation
+
+npm init playwright@latest
+Playwright downloads required browser binaries and creates the scaffold below.
+playwright.config.ts         # Test configuration
+package.json
+package-lock.json            # Or yarn.lock / pnpm-lock.yaml
+tests/
+  example.spec.ts            # Minimal example test
+
+if playwright is not installed. and test
+npm install playwright --save-dev
+npm install @playwright/test  --save-dev
+
+//Typescript installation 
+npm install typescript  --save-dev
+
+//initlize tyescript in out project
+npx tsc --init ts config will get created
+
+//Playwright Test for VSCode add in extensions
+

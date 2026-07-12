@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test("test", async ({ page }) => {
+test("test", async ({ page ,browser}) => {
   await test.step("Navigating to Url", async () => {
     await page.goto("https://www.facebook.com/");
   });
@@ -18,4 +18,6 @@ test("test", async ({ page }) => {
   await test.step("Click on  Login", async () => {
     await page.getByRole("button", { name: "Log in" }).click();
   });
+
+  await browser.close()
 });

@@ -1,204 +1,46 @@
-<testsuites id="" name="" tests="3" failures="1" skipped="0" errors="0" time="8.105657">
-<testsuite name="Chapter01/04_Codegen_Test.spec.ts" timestamp="2026-07-11T03:06:43.007Z" hostname="Google Chrome" tests="2" failures="1" skipped="0" time="10.377" errors="0">
-<testcase name="Codegen_Test_spec" classname="Chapter01/04_Codegen_Test.spec.ts" time="6.848">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="1" time="15.92644200000167">
+<testsuite name="NaveenTests/16_autowait.spec.ts" timestamp="2026-07-12T13:58:22.409Z" hostname="Google Chrome" tests="1" failures="0" skipped="0" time="15.504" errors="1">
+<testcase name="auto wait 3" classname="NaveenTests/16_autowait.spec.ts" time="15.504">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results/Chapter01-04_Codegen_Test-Codegen-Test-spec-Google-Chrome/test-finished-1.png]]
+[[ATTACHMENT|test-results/NaveenTests-16_autowait-auto-wait-3-Google-Chrome/test-failed-1.png]]
 
-[[ATTACHMENT|test-results/Chapter01-04_Codegen_Test-Codegen-Test-spec-Google-Chrome/trace.zip]]
+[[ATTACHMENT|test-results/NaveenTests-16_autowait-auto-wait-3-Google-Chrome/error-context.md]]
+
+[[ATTACHMENT|test-results/NaveenTests-16_autowait-auto-wait-3-Google-Chrome/trace.zip]]
 ]]>
 </system-out>
-</testcase>
-<testcase name="Test 2 will fail" classname="Chapter01/04_Codegen_Test.spec.ts" time="3.529">
-<system-out>
-<![CDATA[
-[[ATTACHMENT|test-results/Chapter01-04_Codegen_Test-Test-2-will-fail-Google-Chrome/test-failed-1.png]]
+<error message="locator.click: Timeout 8000ms exceeded." type="TimeoutError">
+<![CDATA[  [Google Chrome] › NaveenTests/16_autowait.spec.ts:44:5 › auto wait 3 ─────────────────────────────
 
-[[ATTACHMENT|test-results/Chapter01-04_Codegen_Test-Test-2-will-fail-Google-Chrome/error-context.md]]
+    TimeoutError: locator.click: Timeout 8000ms exceeded.
+    Call log:
+      - waiting for locator('xpath=input[(name = \'first_name_\')]')
 
-[[ATTACHMENT|test-results/Chapter01-04_Codegen_Test-Test-2-will-fail-Google-Chrome/trace.zip]]
-]]>
-</system-out>
-<failure message="expect(received).toBe(expected) // Object.is equality" type="expect.toBe">
-<![CDATA[  [Google Chrome] › Chapter01/04_Codegen_Test.spec.ts:11:5 › Test 2 will fail @PlaywrightWithJenkins 
 
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: false
-    Received: true
-
-      11 | test('Test 2 will fail', { tag: ['@PlaywrightWithJenkins'] }, async ({ page }) => {
-      12 |   await page.goto('https://www.youtube.com/@testerstalk');
-    > 13 |   expect(true).toBe(false);
-         |                ^
-      14 | });
-        at /Users/shilpavallapureddy/Documents/PlaywrightTS/tests/Chapter01/04_Codegen_Test.spec.ts:13:16
+      53 |
+      54 |   await page.locator("input[name='agreeTerms']").check();
+    > 55 |   await page.locator("xpath=input[(name = 'first_name_')]").click();
+         |                                                             ^
+      56 | });
+      57 |
+        at /Users/shilpavallapureddy/Documents/PlaywrightTS/tests/NaveenTests/16_autowait.spec.ts:55:61
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/Chapter01-04_Codegen_Test-Test-2-will-fail-Google-Chrome/test-failed-1.png
+    ../test-results/NaveenTests-16_autowait-auto-wait-3-Google-Chrome/test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    Error Context: ../test-results/Chapter01-04_Codegen_Test-Test-2-will-fail-Google-Chrome/error-context.md
+    Error Context: ../test-results/NaveenTests-16_autowait-auto-wait-3-Google-Chrome/error-context.md
 
     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
-    ../test-results/Chapter01-04_Codegen_Test-Test-2-will-fail-Google-Chrome/trace.zip
+    ../test-results/NaveenTests-16_autowait-auto-wait-3-Google-Chrome/trace.zip
     Usage:
 
-        npx playwright show-trace ../test-results/Chapter01-04_Codegen_Test-Test-2-will-fail-Google-Chrome/trace.zip
+        npx playwright show-trace ../test-results/NaveenTests-16_autowait-auto-wait-3-Google-Chrome/trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>
-</failure>
-</testcase>
-</testsuite>
-<testsuite name="Chapter06/08_DELETE_API_Request.spec.ts" timestamp="2026-07-11T03:06:43.007Z" hostname="Google Chrome" tests="1" failures="0" skipped="0" time="1.942" errors="0">
-<testcase name="Create DELETE API Request using playwright &amp; typescript" classname="Chapter06/08_DELETE_API_Request.spec.ts" time="1.942">
-<system-out>
-<![CDATA[POST API Response : {
-  "bookingid": 3073,
-  "booking": {
-    "firstname": "Athena",
-    "lastname": "Walsh",
-    "totalprice": 5072,
-    "depositpaid": true,
-    "bookingdates": {
-      "checkin": "2026-07-10",
-      "checkout": "2026-11-01"
-    },
-    "additionalneeds": "Extra Bed"
-  }
-}
-Booking Id : 3073
-GET API Response : {
-  "firstname": "Athena",
-  "lastname": "Walsh",
-  "totalprice": 5072,
-  "depositpaid": true,
-  "bookingdates": {
-    "checkin": "2026-07-10",
-    "checkout": "2026-11-01"
-  },
-  "additionalneeds": "Extra Bed"
-}
-Token : 689a71ea8c07bb4
-GET API Response : {
-  "_apiName": "APIResponse",
-  "_request": {
-    "_type": "APIRequestContext",
-    "_guid": "request-context@d3fb269e2f15bec09cc926c735081b93"
-  },
-  "_initializer": {
-    "fetchUid": "72237ebcd88fb840c4010b840f2e3f67",
-    "url": "https://restful-booker.herokuapp.com/booking/3073",
-    "status": 200,
-    "statusText": "OK",
-    "headers": [
-      {
-        "name": "Content-Length",
-        "value": "178"
-      },
-      {
-        "name": "Content-Type",
-        "value": "application/json; charset=utf-8"
-      },
-      {
-        "name": "Date",
-        "value": "Sat, 11 Jul 2026 03:06:44 GMT"
-      },
-      {
-        "name": "Etag",
-        "value": "W/\"b2-63+btgQTPoZ+NtAziNMcbD0JdWM\""
-      },
-      {
-        "name": "Nel",
-        "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
-      },
-      {
-        "name": "Report-To",
-        "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=k3q5hE2oJ1XrCenpx%2B0QbB1wzQfiZgczNyZYxiqeIdc%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1783739204\"}],\"max_age\":3600}"
-      },
-      {
-        "name": "Reporting-Endpoints",
-        "value": "heroku-nel=\"https://nel.heroku.com/reports?s=k3q5hE2oJ1XrCenpx%2B0QbB1wzQfiZgczNyZYxiqeIdc%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1783739204\""
-      },
-      {
-        "name": "Server",
-        "value": "Heroku"
-      },
-      {
-        "name": "Via",
-        "value": "1.1 heroku-router"
-      },
-      {
-        "name": "X-Powered-By",
-        "value": "Express"
-      }
-    ],
-    "securityDetails": {
-      "issuer": "Amazon RSA 2048 M01",
-      "protocol": "TLSv1.2",
-      "subjectName": "*.herokuapp.com",
-      "validFrom": 1767225600,
-      "validTo": 1801267199
-    },
-    "serverAddr": {
-      "ipAddress": "::ffff:107.22.57.98",
-      "port": 443
-    }
-  },
-  "_headers": {
-    "_headersMap": {
-      "_map": {}
-    },
-    "_headersArray": [
-      {
-        "name": "Content-Length",
-        "value": "178"
-      },
-      {
-        "name": "Content-Type",
-        "value": "application/json; charset=utf-8"
-      },
-      {
-        "name": "Date",
-        "value": "Sat, 11 Jul 2026 03:06:44 GMT"
-      },
-      {
-        "name": "Etag",
-        "value": "W/\"b2-63+btgQTPoZ+NtAziNMcbD0JdWM\""
-      },
-      {
-        "name": "Nel",
-        "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
-      },
-      {
-        "name": "Report-To",
-        "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=k3q5hE2oJ1XrCenpx%2B0QbB1wzQfiZgczNyZYxiqeIdc%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1783739204\"}],\"max_age\":3600}"
-      },
-      {
-        "name": "Reporting-Endpoints",
-        "value": "heroku-nel=\"https://nel.heroku.com/reports?s=k3q5hE2oJ1XrCenpx%2B0QbB1wzQfiZgczNyZYxiqeIdc%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1783739204\""
-      },
-      {
-        "name": "Server",
-        "value": "Heroku"
-      },
-      {
-        "name": "Via",
-        "value": "1.1 heroku-router"
-      },
-      {
-        "name": "X-Powered-By",
-        "value": "Express"
-      }
-    ]
-  }
-}
-DELETE API Response : Created
-
-[[ATTACHMENT|test-results/Chapter06-08_DELETE_API_Re-2824f-using-playwright-typescript-Google-Chrome/trace.zip]]
-]]>
-</system-out>
+</error>
 </testcase>
 </testsuite>
 </testsuites>

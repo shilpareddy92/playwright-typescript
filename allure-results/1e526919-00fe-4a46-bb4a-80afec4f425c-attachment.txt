@@ -1,0 +1,6 @@
+true
+true
+true
+true
+checkbox is checked [object Promise]
+checkbox is checked [object Promise]

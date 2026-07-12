@@ -46,7 +46,8 @@ export default defineConfig({
     trace: "on",
     headless: false,
     screenshot: "on",
-    testIdAttribute: "data-tab-item",
+    /* testIdAttribute: "data-tab-item",
+    testIdAttribute: 'data-naveenid' */
     actionTimeout: 10000,
     video: "off",
     /* launchOptions: {
