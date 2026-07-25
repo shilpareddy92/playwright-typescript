@@ -58,6 +58,7 @@ test("Single File using file chooser ", async () => {
   await page.goto(
     "https://www.roberthalf.com/au/en/find-jobs/upload-resume/app",
   );
+  await page.locator("//button[text()='Accept All Cookies']").click();
 
   const fileChooserPromise = page.waitForEvent("filechooser");
   await page.getByLabel("Upload resume").first().click();

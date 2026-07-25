@@ -75,13 +75,13 @@
   },
   "suites": [
     {
-      "title": "NaveenTests/06_NoIncognito.spec.ts",
-      "file": "NaveenTests/06_NoIncognito.spec.ts",
+      "title": "NaveenTests/17_mobileView.spec.ts",
+      "file": "NaveenTests/17_mobileView.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "No Incognito test",
+          "title": "",
           "ok": true,
           "tags": [],
           "tests": [
@@ -93,26 +93,26 @@
               "projectName": "Google Chrome",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 10,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6334,
+                  "duration": 1612,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-25T01:38:56.028Z",
+                  "startTime": "2026-07-25T08:01:51.374Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/NaveenTests-06_NoIncognito-No-Incognito-test-Google-Chrome/test-finished-1.png"
+                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/NaveenTests-17_mobileView--Google-Chrome/test-finished-1.png"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/NaveenTests-06_NoIncognito-No-Incognito-test-Google-Chrome/trace.zip"
+                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/NaveenTests-17_mobileView--Google-Chrome/trace.zip"
                     }
                   ]
                 }
@@ -120,9 +120,9 @@
               "status": "expected"
             }
           ],
-          "id": "96c9d8ca7ee1078cf9af-d30814f4be0e62b2ce56",
-          "file": "NaveenTests/06_NoIncognito.spec.ts",
-          "line": 14,
+          "id": "8476f0042e2d0390fe50-13792c2b519e37a490e7",
+          "file": "NaveenTests/17_mobileView.spec.ts",
+          "line": 4,
           "column": 5
         }
       ]
@@ -130,8 +130,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-25T01:38:55.720Z",
-    "duration": 6792.3369999999995,
+    "startTime": "2026-07-25T08:01:51.044Z",
+    "duration": 2100.677999999374,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

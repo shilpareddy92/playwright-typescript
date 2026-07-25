@@ -1,11 +1,11 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="6.792337">
-<testsuite name="NaveenTests/06_NoIncognito.spec.ts" timestamp="2026-07-25T01:38:55.881Z" hostname="Google Chrome" tests="1" failures="0" skipped="0" time="6.334" errors="0">
-<testcase name="No Incognito test" classname="NaveenTests/06_NoIncognito.spec.ts" time="6.334">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="2.100677999999374">
+<testsuite name="NaveenTests/17_mobileView.spec.ts" timestamp="2026-07-25T08:01:51.228Z" hostname="Google Chrome" tests="1" failures="0" skipped="0" time="1.612" errors="0">
+<testcase name="" classname="NaveenTests/17_mobileView.spec.ts" time="1.612">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results/NaveenTests-06_NoIncognito-No-Incognito-test-Google-Chrome/test-finished-1.png]]
+[[ATTACHMENT|test-results/NaveenTests-17_mobileView--Google-Chrome/test-finished-1.png]]
 
-[[ATTACHMENT|test-results/NaveenTests-06_NoIncognito-No-Incognito-test-Google-Chrome/trace.zip]]
+[[ATTACHMENT|test-results/NaveenTests-17_mobileView--Google-Chrome/trace.zip]]
 ]]>
 </system-out>
 </testcase>
