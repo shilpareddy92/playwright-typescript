@@ -32,7 +32,6 @@ test("login test", async ({}) => {
   //await new Promise(() => {}); // prevents your script from exiting!
 });
 
-
 test("Registration page", async ({}) => {
   //open the browser
   const browser: Browser = await chromium.launch({
@@ -54,22 +53,52 @@ test("Registration page", async ({}) => {
   const phoneNumber: Locator = page.locator("#input-telephone");
   const password: Locator = page.locator("#input-password");
   const confirmPassword: Locator = page.locator("#input-confirm");
-  const privayCB = page.locator("//input[@name='agree']")
+  const privayCB = page.locator("//input[@name='agree']");
   const loginButton: Locator = page.locator("[value='Continue']");
 
   await continueButton.click();
   await firstName.fill("Test");
-  await lastName.fill("Test");
+  await page.waitForTimeout(2000);
+  await lastName.type("type1234566778888888888888");
+  await page.waitForTimeout(2000);
   await email.fill("Testmine@gmail.com");
   await phoneNumber.fill("1234567");
   await password.fill("Test@g!23");
   await confirmPassword.fill("Test@g!23");
-  await privayCB.click()
+  await privayCB.click();
   await loginButton.click();
   await page.waitForTimeout(5000);
 
-  
-
   //await browser.close();await page.locator('body').click();
   //await new Promise(() => {}); // prevents your script from exiting!
+});
+
+test("Verify Dashboard", async ({ page }) => {
+  await page.goto("https://www.scaler.com");
+
+  // Verify user is already logged in
+  await expect(page).toHaveURL("scalar");
+
+  // Or verify some element visible after login
+  // await expect(page.locator("text=My Dashboard")).toBeVisible();
+});
+
+test("Verify text", async ({ page }) => {
+  await page.goto("https://practicetestautomation.com/practice-test-login/");
+
+  // Verify user is already logged in
+  console.log(await page.locator("#username").innerHTML());
+  console.log(await page.locator("#username").textContent());
+  console.log(await page.locator("#username").innerText());
+  const field = page.locator("#username");
+  console.log(await field.evaluate((e1) => window.getComputedStyle(e1).color));
+  console.log(await field.evaluate((e1) => window.getComputedStyle(e1).backgroundColor));
+  console.log(await field.evaluate((e1) => window.getComputedStyle(e1).borderColor));
+});
+
+test("text methods demo", async ({}) => {
+  const number = [1, 2, 3, 4, 5];
+  console.log(number.filter((e) => e % 2 == 0));
+  console.log(number.map((e) => e * 2));
+  console.log(number.reduce((acc, value) => value + acc, 0));
 });

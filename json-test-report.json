@@ -75,14 +75,14 @@
   },
   "suites": [
     {
-      "title": "NaveenTests/16_autowait.spec.ts",
-      "file": "NaveenTests/16_autowait.spec.ts",
+      "title": "NaveenTests/06_NoIncognito.spec.ts",
+      "file": "NaveenTests/06_NoIncognito.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "auto wait 3",
-          "ok": false,
+          "title": "No Incognito test",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -93,65 +93,36 @@
               "projectName": "Google Chrome",
               "results": [
                 {
-                  "workerIndex": 71,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 15504,
-                  "error": {
-                    "message": "TimeoutError: locator.click: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=input[(name = \\'first_name_\\')]')\u001b[22m\n",
-                    "stack": "TimeoutError: locator.click: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=input[(name = \\'first_name_\\')]')\u001b[22m\n\n    at /Users/shilpavallapureddy/Documents/PlaywrightTS/tests/NaveenTests/16_autowait.spec.ts:55:61",
-                    "location": {
-                      "file": "/Users/shilpavallapureddy/Documents/PlaywrightTS/tests/NaveenTests/16_autowait.spec.ts",
-                      "column": 61,
-                      "line": 55
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 53 |\u001b[39m\n \u001b[90m 54 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"input[name='agreeTerms']\"\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 55 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"xpath=input[(name = 'first_name_')]\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 56 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 57 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/Users/shilpavallapureddy/Documents/PlaywrightTS/tests/NaveenTests/16_autowait.spec.ts",
-                        "column": 61,
-                        "line": 55
-                      },
-                      "message": "TimeoutError: locator.click: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=input[(name = \\'first_name_\\')]')\u001b[22m\n\n\n\u001b[0m \u001b[90m 53 |\u001b[39m\n \u001b[90m 54 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"input[name='agreeTerms']\"\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 55 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"xpath=input[(name = 'first_name_')]\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 56 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 57 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/shilpavallapureddy/Documents/PlaywrightTS/tests/NaveenTests/16_autowait.spec.ts:55:61\u001b[22m"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 6334,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-12T13:58:22.557Z",
+                  "startTime": "2026-07-25T01:38:56.028Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/NaveenTests-16_autowait-auto-wait-3-Google-Chrome/test-failed-1.png"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/NaveenTests-16_autowait-auto-wait-3-Google-Chrome/error-context.md"
+                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/NaveenTests-06_NoIncognito-No-Incognito-test-Google-Chrome/test-finished-1.png"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/NaveenTests-16_autowait-auto-wait-3-Google-Chrome/trace.zip"
+                      "path": "/Users/shilpavallapureddy/Documents/PlaywrightTS/test-results/NaveenTests-06_NoIncognito-No-Incognito-test-Google-Chrome/trace.zip"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "/Users/shilpavallapureddy/Documents/PlaywrightTS/tests/NaveenTests/16_autowait.spec.ts",
-                    "column": 61,
-                    "line": 55
-                  }
+                  ]
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "48df73a294b4ecb37eb0-0a0cd77e70506e65be23",
-          "file": "NaveenTests/16_autowait.spec.ts",
-          "line": 44,
+          "id": "96c9d8ca7ee1078cf9af-d30814f4be0e62b2ce56",
+          "file": "NaveenTests/06_NoIncognito.spec.ts",
+          "line": 14,
           "column": 5
         }
       ]
@@ -159,11 +130,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-12T13:58:22.242Z",
-    "duration": 15926.442000001669,
-    "expected": 0,
+    "startTime": "2026-07-25T01:38:55.720Z",
+    "duration": 6792.3369999999995,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }

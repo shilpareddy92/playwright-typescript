@@ -18,6 +18,7 @@ test("locator test part_II", async () => {
   const page: Page = await browser.newPage();
   await page.goto("http://127.0.0.1:5500/app/app.html");
   await page.waitForLoadState("domcontentloaded");
+ 
 
   await page.getByTestId("username").fill("naveenautomation");
   await page.getByTestId("password").fill("naveen123");
@@ -40,6 +41,8 @@ test("Aria Role locator test", async () => {
   await expect(
     page.getByRole("heading", { name: "Register Account" }),
   ).toBeVisible();
+
+  
 
   await expect(
     page.getByRole("link", { name: "Forgotten Password" }),

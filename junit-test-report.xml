@@ -1,46 +1,13 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="1" time="15.92644200000167">
-<testsuite name="NaveenTests/16_autowait.spec.ts" timestamp="2026-07-12T13:58:22.409Z" hostname="Google Chrome" tests="1" failures="0" skipped="0" time="15.504" errors="1">
-<testcase name="auto wait 3" classname="NaveenTests/16_autowait.spec.ts" time="15.504">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="6.792337">
+<testsuite name="NaveenTests/06_NoIncognito.spec.ts" timestamp="2026-07-25T01:38:55.881Z" hostname="Google Chrome" tests="1" failures="0" skipped="0" time="6.334" errors="0">
+<testcase name="No Incognito test" classname="NaveenTests/06_NoIncognito.spec.ts" time="6.334">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results/NaveenTests-16_autowait-auto-wait-3-Google-Chrome/test-failed-1.png]]
+[[ATTACHMENT|test-results/NaveenTests-06_NoIncognito-No-Incognito-test-Google-Chrome/test-finished-1.png]]
 
-[[ATTACHMENT|test-results/NaveenTests-16_autowait-auto-wait-3-Google-Chrome/error-context.md]]
-
-[[ATTACHMENT|test-results/NaveenTests-16_autowait-auto-wait-3-Google-Chrome/trace.zip]]
+[[ATTACHMENT|test-results/NaveenTests-06_NoIncognito-No-Incognito-test-Google-Chrome/trace.zip]]
 ]]>
 </system-out>
-<error message="locator.click: Timeout 8000ms exceeded." type="TimeoutError">
-<![CDATA[  [Google Chrome] › NaveenTests/16_autowait.spec.ts:44:5 › auto wait 3 ─────────────────────────────
-
-    TimeoutError: locator.click: Timeout 8000ms exceeded.
-    Call log:
-      - waiting for locator('xpath=input[(name = \'first_name_\')]')
-
-
-      53 |
-      54 |   await page.locator("input[name='agreeTerms']").check();
-    > 55 |   await page.locator("xpath=input[(name = 'first_name_')]").click();
-         |                                                             ^
-      56 | });
-      57 |
-        at /Users/shilpavallapureddy/Documents/PlaywrightTS/tests/NaveenTests/16_autowait.spec.ts:55:61
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ../test-results/NaveenTests-16_autowait-auto-wait-3-Google-Chrome/test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ../test-results/NaveenTests-16_autowait-auto-wait-3-Google-Chrome/error-context.md
-
-    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
-    ../test-results/NaveenTests-16_autowait-auto-wait-3-Google-Chrome/trace.zip
-    Usage:
-
-        npx playwright show-trace ../test-results/NaveenTests-16_autowait-auto-wait-3-Google-Chrome/trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</error>
 </testcase>
 </testsuite>
 </testsuites>

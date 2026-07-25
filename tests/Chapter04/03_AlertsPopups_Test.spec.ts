@@ -15,7 +15,7 @@ test("Handling Alert popups in Playwright ", async ({ page }) => {
   await page.getByText("See an example alert", { exact: true }).click();
 });
 
-test("Handling Popups popups in Playwright ", async ({ page }) => {
+test("Handling confirm popups in Playwright ", async ({ page }) => {
   // Go to URL
   await page.goto(
     "https://www.selenium.dev/documentation/webdriver/interactions/alerts/",
@@ -44,5 +44,5 @@ test("Handling Prompt Popups in Playwright ", async ({ page }) => {
     console.log(`Prompt popup message is : ${dialog.defaultValue()}`);
   });
   await page.getByText("See a sample prompt", { exact: true }).click();
-  await page.waitForTimeout(5000)
+  await page.waitForTimeout(2000)
 });
